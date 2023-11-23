@@ -31,11 +31,11 @@
             <p>109 Harbour St. Kingston</p>
         </div>
         <div class='row col-3'>
-            <a class='col-4 nav-button row'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+            <a class='col-4 nav-button row' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
                 <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
                 <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
               </svg> Register</p></a>
-              <a class='col-4 nav-button row'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <a class='col-4 nav-button row' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
               </svg> Login</p></a>
         </div>
@@ -54,5 +54,62 @@
     </div>
     <div class=''>
         {{$slot}}
+    </div>
+    <div class='footer'>
+        <div class='row text-center'>
+            <div class='col-2'>
+                <p>ABOUT</p>
+                <ul style='list-style-type: none; padding:0;'>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                </ul>
+            </div>
+            <div class='col-2'>
+                <p>MY ACCOUNT</p>
+                <ul style='list-style-type: none; padding:0;'>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                </ul>
+            </div>
+            <div class='col-2'>
+                <p>FAQ</p>
+                <ul style='list-style-type: none; padding:0;'>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                </ul>
+            </div>
+            <div class='col-2'>
+                <p>LEGAL DOCUMENTS</p>
+                <ul style='list-style-type: none; padding:0;'>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                    <li>LINK</li>
+                </ul>
+            </div>
+            <div class='col-4'>
+                <img src='{{ asset('/logo.png') }}' class='logo' style='width:300px; height:150px'/>
+                <img src='{{ asset('/images/payment.png') }}' class='logo' style='width:300px; height:200px'/>
+
+            </div>
+        </div>
     </div>
 </body>
