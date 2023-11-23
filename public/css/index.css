@@ -84,4 +84,17 @@ body {
     width: 270px;
 }
 
+.news-section {
+    min-height:250px;
+    width:100%;
+    padding: 50px 100px;
+    background-color: rgb(219, 100, 100);
+    color:white;
+}
+
+.news-text {
+    font-size: 50px;
+}
+
+
 
