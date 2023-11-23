@@ -27,7 +27,6 @@ body {
 }
 
 .nav-button {
- 
     background:none;
     border:none;
     text-decoration: none;
@@ -47,7 +46,7 @@ body {
 
 .jumbotron {
     min-height: 500px;
-    width:120%;
+    width:100%;
     background: url("/images/jumbotron.png");
     background-size: cover;  /* This will cover the entire div */
     background-position: center;
@@ -64,6 +63,25 @@ body {
     font-weight: 600;
     color:white;
     background-color: rgb(235, 119, 119);
+}
+
+.brands-section {
+    min-height:500px;
+    width:100%;
+    padding: 50px 100px;
+    background-color: rgb(214, 214, 214);
+}
+
+.brand-block {
+    width:250px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s;
+}
+
+.brand-block:hover {
+    z-index:100;
+    width: 270px;
 }
 
 

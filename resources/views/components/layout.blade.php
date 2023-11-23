@@ -52,7 +52,7 @@
     <div class='banner text-center pt-2' >
         <p>Call to action highlight banner freeshipping on tech via TARA | knutsford</p>
     </div>
-    <div class='col-10'>
+    <div class=''>
         {{$slot}}
     </div>
 </body>
