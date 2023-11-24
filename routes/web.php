@@ -30,3 +30,5 @@ Route::get('/register', function () {
 Route::post('/register', [CustomerController::class, 'register']);
 
 Route::post('/login', [CustomerController::class, 'login']);
+
+Route::post('/logout', [CustomerController::class, 'logout']);

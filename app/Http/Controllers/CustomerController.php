@@ -41,4 +41,9 @@ class CustomerController extends Controller
             return redirect('/login')->with('error', 'Incorrect Credentials!');
         }
     }
+
+    public function logout(Request $request) {
+        auth()->logout();
+        return redirect('/login');
+    }
 }
