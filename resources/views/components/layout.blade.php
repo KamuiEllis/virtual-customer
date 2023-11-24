@@ -124,5 +124,11 @@
 
             </div>
         </div>
+
+        <div>
+            <img src='{{ asset('/white-logo.png') }}' class='logo' style='width:300px; height:200px'/>
+            <p style='margin-bottom:0;'>Computers Online copyrighted 2023 |</p>
+            <p>Powered by <b style='color:red;'>Darkzide Studios</b></p>
+        </div>
     </div>
 </body>
