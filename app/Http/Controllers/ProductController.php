@@ -18,9 +18,10 @@ class ProductController extends Controller
         return view("products", ['products' => $products]);
     }
 
+
     public function products(Request $request) {
         $products = Product::orderBy("id","desc")->get();
-        return view("products", ['products' => $products]);
+        return view("inventory", ['products' => $products]);
     }
 
     public function getProduct(Product $product) {

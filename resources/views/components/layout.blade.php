@@ -1,5 +1,7 @@
 <html lang="en">
 
+   
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +20,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
     <title>Virtual Intelligence</title>
-    <script src="{{ asset('/responsiveness.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    {{-- <script src="{{ asset('/responsiveness.js') }}"></script> --}}
+    <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
+    <script href="{{ asset('/owl.carousel.min.js') }}"></script>
+    <script href="{{ asset('/main.js') }}"></script>
 </head>
 
 <body>
@@ -58,8 +63,8 @@
         <div class='col-2'>
             <img src='{{ asset('/logo.png') }}' class='logo' width='200'/>
         </div>
-        <form class='col-10 d-flex align-items-center flex-grow-1'>
-                <input type='text' placeholder="Search Product, Services" class='main-field' /> 
+        <form method="POST" action='/search' class='col-10 d-flex align-items-center flex-grow-1'>
+                <input type='text' name='text' placeholder="Search Product, Services" class='main-field' /> 
         </form>
     </div>
     <div class='banner text-center pt-2' >

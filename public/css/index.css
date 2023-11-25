@@ -137,4 +137,86 @@ body {
 }
 
 
+.bg-left-half {
+    position: relative; }
+    .bg-left-half:before {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+      content: "";
+      left: 0;
+      top: 0;
+      background-color: #f8f9fa; }
+  
+  .media-29101 img {
+    margin-bottom: 20px; }
+  
+  .media-29101 h3 {
+    font-size: 18px;
+    font-weight: 900 !important; }
+    .media-29101 h3 a {
+      color: #6c757d; }
+  
+  .owl-2-style .owl-nav {
+    display: none; }
+  
+  .owl-2-style .owl-dots {
+    text-align: center;
+    position: relative;
+    bottom: -30px; }
+    .owl-2-style .owl-dots .owl-dot {
+      display: inline-block; }
+      .owl-2-style .owl-dots .owl-dot span {
+        display: inline-block;
+        width: 15px;
+        height: 3px;
+        border-radius: 0px;
+        background: #cccccc;
+        -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        margin: 3px; }
+      .owl-2-style .owl-dots .owl-dot.active span {
+        background: #007bff; }
+      .owl-2-style .owl-dots .owl-dot:active, .owl-2-style .owl-dots .owl-dot:focus {
+        outline: none; }
 
+        
+        #carouselExample {
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner .carousel-item {
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 400px; /* Fixed height for images */
+  object-fit: cover; /* Adjust as needed */
+}
+
+/* Adjustments for peeking images */
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev { 
+  transform: translateX(0);
+}
+
+.carousel-inner .active.carousel-item-right,
+.carousel-inner .active.carousel-item-left { 
+  transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-next,
+.carousel-inner .active.carousel-item-left,
+.carousel-inner .carousel-item-prev.carousel-item-right,
+.carousel-inner .active.carousel-item-right {
+  transform: translateX(-25%);
+}
+
+.product-container {
+  
+}
