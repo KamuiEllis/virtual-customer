@@ -35,3 +35,9 @@ Route::post('/register', [CustomerController::class, 'register']);
 Route::post('/login', [CustomerController::class, 'login']);
 
 Route::post('/logout', [CustomerController::class, 'logout']);
+
+//product
+
+Route::post('/search', [ProductController::class, 'search']);
+
+Route::get('/products/{product}', [ProductController::class, 'product']);

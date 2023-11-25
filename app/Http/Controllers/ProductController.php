@@ -15,7 +15,11 @@ class ProductController extends Controller
         ]);
 
         $products = Product::search($inputs['text'])->get();
-        return view("products", ['products' => $products]);
+        return view("inventory", ['products' => $products]);
+    }
+
+    public function product(Product $product) {
+        return view('product', ['product'=> $product]);
     }
 
 

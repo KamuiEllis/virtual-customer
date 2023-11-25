@@ -1,6 +1,6 @@
 <html lang="en">
 
-   
+
 
 <head>
     <meta charset="UTF-8">
@@ -64,6 +64,7 @@
             <img src='{{ asset('/logo.png') }}' class='logo' width='200'/>
         </div>
         <form method="POST" action='/search' class='col-10 d-flex align-items-center flex-grow-1'>
+            @csrf
                 <input type='text' name='text' placeholder="Search Product, Services" class='main-field' /> 
         </form>
     </div>

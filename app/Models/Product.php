@@ -27,6 +27,6 @@ class Product extends Model
 
     public function toSearchableArray()
     {
-        return ['name' => $this->name, 'sku' => $this->sku];
+        return ['name' => $this->name, 'sku' => $this->sku, 'description' => $this->description, 'shortDescription' => $this->shortDescription, 'cost' => $this];
     }
 }
