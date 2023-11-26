@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,8 @@ Route::post('/search', [ProductController::class, 'search']);
 Route::get('/products/{product}', [ProductController::class, 'product']);
 
 Route::post('/products/addToCart/{product}', [ProductController::class, 'addToCart']);
+
+
+//cart 
+
+Route::get('/cart', [CartController::class, 'cart']);
