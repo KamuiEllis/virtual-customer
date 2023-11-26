@@ -41,3 +41,5 @@ Route::post('/logout', [CustomerController::class, 'logout']);
 Route::post('/search', [ProductController::class, 'search']);
 
 Route::get('/products/{product}', [ProductController::class, 'product']);
+
+Route::post('/products/addToCart/{product}', [ProductController::class, 'addToCart']);

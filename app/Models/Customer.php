@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Cart;
 use Laravel\Scout\Searchable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
@@ -23,6 +24,11 @@ class Customer extends Authenticatable
         'name'
     ];
 
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 
     public function toSearchableArray()
     {

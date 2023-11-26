@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Cart;
 use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
@@ -24,6 +25,11 @@ class Product extends Model
         'brand',
         'colors'
     ];
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 
     public function toSearchableArray()
     {
