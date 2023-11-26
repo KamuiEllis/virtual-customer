@@ -71,7 +71,7 @@
             <div class='row'>
             @foreach ($products as $product)
                 <div class='product-container col-3 m-2' style='border:none;'>
-                    <img class='' src='{{ asset("http://127.0.0.1:8000/storage/products/$product->image") }}'  />
+                    <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
                     <div class=''>
                         <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost) @endphp</span></p>
                         <p class='mb-3' style='min-height:100px;'>{{$product->shortDescription}}</p>
