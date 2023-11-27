@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 
@@ -53,3 +54,6 @@ Route::get('/cart', [CartController::class, 'cart']);
 Route::delete('/carts/{cart}', [CartController::class, 'deleteCart']);
 
 Route::get('/carts/toCheckout', [CartController::class, 'toCheckout']);
+
+//order
+Route::post('/pay/{zone}', [OrderController::class, 'createOrder']);

@@ -1,5 +1,6 @@
 <x-layout>
-    <form class='row mt-1 p-5' action='/pay' method='POST'>
+    <form class='row mt-1 p-5' action='/pay/{{$zone->id}}' method='POST'>
+      @csrf
         <h3>Checkout</h3>
         <hr/>
        

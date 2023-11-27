@@ -44,7 +44,7 @@ class CartController extends Controller
         $totalPounds = 0;
         $calculatedProducts = [];
         $zone = Zone::find($inputs['zone']);
-        $carts = DB::table('carts')->where('customer', auth()->user()->id)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
+        $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', true)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
 
         foreach($carts as $product) {
            $totalCost +=  ($product->weight * $zone->perPound) + $product->cost + $zone->price;
