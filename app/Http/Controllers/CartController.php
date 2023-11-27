@@ -8,6 +8,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\View;
 
 class CartController extends Controller
 {
@@ -40,14 +41,16 @@ class CartController extends Controller
         ]); 
 
         $totalCost = 0;
+        $totalPounds = 0;
         $calculatedProducts = [];
         $zone = Zone::find($inputs['zone']);
         $carts = DB::table('carts')->where('customer', auth()->user()->id)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
 
         foreach($carts as $product) {
            $totalCost +=  ($product->weight * $zone->perPound) + $product->cost + $zone->price;
+           $totalPounds += $product->weight;
         }   
 
-        return $totalCost;
+        return view('checkout', ['totalCost' => $totalCost, 'zone' => $zone, 'totalPounds' => $totalPounds]);
     }
 }
