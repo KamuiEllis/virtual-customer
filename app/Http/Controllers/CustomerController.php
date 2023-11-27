@@ -46,4 +46,22 @@ class CustomerController extends Controller
         auth()->logout();
         return redirect('/login');
     }
+
+    public function editProfile(Customer $customer,  Request $request) {
+        $inputs = $request->validate([
+            'firstname' => ['required'],
+            'lastname' => ['required'],
+            'name' => [],
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:6', 'confirmed'],
+        ]);
+
+        $inputs['password'] = bcrypt($inputs['password']);
+
+        $customer->update($inputs);
+
+        auth()->login($customer);
+
+        return redirect('/profile')->with('success', 'Profile saved');
+    }   
 }

@@ -27,6 +27,12 @@ Route::get('/login', function () {
 
 Route::get('/inventory', [ProductController::class, 'products']);
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/orderHistory', [OrderController::class, 'orders']);
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -37,6 +43,8 @@ Route::post('/register', [CustomerController::class, 'register']);
 Route::post('/login', [CustomerController::class, 'login']);
 
 Route::post('/logout', [CustomerController::class, 'logout']);
+
+Route::put('/editProfile/{customer}', [CustomerController::class, 'editProfile']);
 
 //product
 

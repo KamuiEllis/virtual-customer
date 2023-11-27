@@ -34,4 +34,9 @@ class OrderController extends Controller
 
         return $newInfo;
     }
+
+    public function orders(Request $request) {
+        $orders = Order::where('customer_id', auth()->user()->id)->orderBy("id","desc")->get();
+        return view("orderHistory", ['orders' => $orders]);
+    }
 }
