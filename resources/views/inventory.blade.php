@@ -73,7 +73,7 @@
                 <div class='product-container col-3 m-2' style='border:none;'>
                     <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
                     <div class=''>
-                        <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost) @endphp</span></p>
+                        <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost)@endphp</span> JMD</p>
                         <p class='mb-3' style='min-height:100px;'>{{$product->shortDescription}}</p>
                         <div style='width:100%; text-align:center;'>
                             <a href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>

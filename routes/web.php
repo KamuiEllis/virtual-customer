@@ -49,3 +49,7 @@ Route::post('/products/addToCart/{product}', [ProductController::class, 'addToCa
 //cart 
 
 Route::get('/cart', [CartController::class, 'cart']);
+
+Route::delete('/carts/{cart}', [CartController::class, 'deleteCart']);
+
+Route::get('/carts/toCheckout', [CartController::class, 'toCheckout']);

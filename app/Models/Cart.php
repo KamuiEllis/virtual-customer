@@ -16,13 +16,13 @@ class Cart extends Model
     ];
 
 
-    public function customers()
+    public function product()
     {
-        return $this->belongsTo(Customer::class);
+        return $this->hasMany(Product::class);
     }
 
-    public function products()
+    public function customer()
     {
-        return $this->belongsTo(Product::class);
+        return $this->hasOne(Customer::class);
     }
 }
