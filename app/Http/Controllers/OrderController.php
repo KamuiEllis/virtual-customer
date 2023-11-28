@@ -32,7 +32,7 @@ class OrderController extends Controller
         DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', true)->update(['enabled' => false]);
         DB::table('customers')->where('id', auth()->user()->id)->update(['cart' => 0]);
 
-        return $newInfo;
+        return redirect('/orderHistory')->with('success', 'Order was successful');
     }
 
     public function orders(Request $request) {

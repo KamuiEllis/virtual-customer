@@ -17,7 +17,7 @@
                     <img class='' src='{{asset('/stars.png')}}' width='100'  /> <p style='margin-left:6px;'>4.7</p>
 
                     <h3>$@php echo number_format($product->cost) @endphp</h3>
-                    <p>Quantity: {{$product->quantity}}</p>
+                    {{-- <p>Quantity: {{$product->quantity}}</p> --}}
                     <p>{{$product->shortDescription}}</p>
 
                     <form action='/products/addToCart/{{last(request()->segments())}}' method="POST">

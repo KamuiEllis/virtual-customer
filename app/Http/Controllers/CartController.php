@@ -20,7 +20,7 @@ class CartController extends Controller
         //    ->select('posts.*', 'users.name as user_name')
         //    ->get();
 
-        $cart = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', true)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
+        $cart = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', true)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id')->get();
         $zones = DB::table('zones')->get();
         return view('cart', ['cart' => $cart, 'zones' => $zones]);
     }

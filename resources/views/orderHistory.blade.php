@@ -1,5 +1,10 @@
 <x-layout>
     <div class='row mt-1 p-5'>
+        @if (session('success'))
+        <div class='alert alert-success mt-5' role='alert'>
+            {{ session('success') }}
+        </div>
+        @endif
         <h2>Order History</h2>
         <hr/>
 
