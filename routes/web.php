@@ -65,3 +65,7 @@ Route::get('/carts/toCheckout', [CartController::class, 'toCheckout']);
 
 //order
 Route::post('/pay/{zone}', [OrderController::class, 'createOrder']);
+
+Route::get('/orderDetail/{order}', [OrderController::class, 'orderDetail']);
+
+
