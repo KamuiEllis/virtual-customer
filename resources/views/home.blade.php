@@ -71,6 +71,11 @@
     </div>
     </div>
 
+
+    @if (isset($data))
+    <p>{{$data}}</p>
+@endif
+
     <div class='deals-section'>
         <div class='inner-deals-section'>
             <div class='row'>

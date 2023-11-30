@@ -6,35 +6,49 @@ body {
 
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+
 .first-nav-container {
     /* padding: 0 150px; */
-    margin:auto;
+    display:flex;
+    width:100%;
+    justify-content: center;
+ 
+    min-height: 70px;
 }
 
 .main-field{
     width:100%;
-    border: none;
-    height:40px;
-    border-bottom: 1px solid black;
-    padding:10px;
+
+}
+
+.blue-square {
+  background-color: #007bff;
+  min-width:100px;
+  height:50px;
 }
 
 .first-banner {
-    width:100%;
-    background-color: rgb(214, 214, 214);
-    padding:auto;
     
+    background-color: #eff0f3;
+    padding:auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .nav-button {
     background:none;
     border:none;
     text-decoration: none;
-    color:black;
+    color:#52555b;
 }
 
 .logo {
-    height:130px;
+    height: 70px;
+    margin: 10px 0px;
+    width: 134px;
 }
 
 .banner {

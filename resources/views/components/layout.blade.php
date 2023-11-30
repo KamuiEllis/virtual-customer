@@ -36,23 +36,23 @@
             {{-- <p>109 Harbour St. Kingston</p> --}}
         </div>
         @auth
-        <div class='col-5'>
-            <form  class='row ' style='margin-bottom:0px; float:right; width:100%;' action="/logout" method="POST" >
+        <div style='width:100%;'>
+            <form   style='margin-bottom:0px; width:100%; ' action="/logout" method="POST" >
                 @csrf
 
-                <a class='col-3 nav-button ' href='/orderHistory'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <a class='col-3 nav-button ' href='/orderHistory'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-clock-history" viewBox="0 0 16 16">
                     <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483m.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535m-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
                     <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
                     <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
                   </svg> Order History</p></a>
 
-                <a class='col-3 nav-button ' href='/cart'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <a class='col-3 nav-button ' href='/cart'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-bag" viewBox="0 0 16 16">
                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
                   </svg> Cart <span style='background-color: rgb(235, 119, 119);
                   border-radius: 5px;
                   padding: 0px 9px;'>{{auth()->user()->cart}}</span></p></a>
 
-                  <a class='col-3 nav-button row' href='/profile'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <a class='col-3 nav-button row' href='/profile'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                   </svg> Profile</p></a>
 
@@ -60,29 +60,79 @@
                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
                     <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                   </svg> Sign Out</p></a></button>
+
+                  <a class='nav-button row' style=' margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                  </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
+
+
+                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:101px; padding:0; margin-left:331px'>Tech News Today</p></a>
+                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
             </form>
         </div>
         @else
-            <div class='row col-3'>
-                <a class='col-4 nav-button row' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+            <div class='' style='width:100%;'>
+               
+                <a class='nav-button row' style='float:right; margin:0 10px;' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-person-add" viewBox="0 0 16 16">
                     <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
                     <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
                 </svg> Register</p></a>
-                <a class='col-4 nav-button row' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <a class='nav-button row' style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-person" viewBox="0 0 16 16">
                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
                 </svg> Login</p></a>
+                <a class='nav-button row' style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-rss" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
+                  </svg> Feedback</p></a>
+
+                  <a class='nav-button row' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                  </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
+
+
+                  <a class='nav-button row' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
+                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
             </div>
         @endif    
     </div>
-    <div class='container row first-nav-container'>
+    <div class='first-nav-container '>
         
-        <div class='col-2'>
-            <img src='{{ asset('/logo.png') }}' class='logo' width='200'/>
+        {{-- <div class=''>
+            <img src='{{ asset('/logo.png') }}' class='logo' />
         </div>
-        <form method="POST" action='/search' class='col-10 d-flex align-items-center flex-grow-1'>
+
+        <div style=''>
+            <input type='text' name='text' placeholder="Search Product, Services" class='main-field' /> 
+        </div> --}}
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <a class="navbar-brand" href="#">
+                <img src='{{ asset('/logo.png') }}' class='logo' />
+
+              </a>
+          
+              <!-- Text bar -->
+              <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+              </div>
+          
+              <!-- This is for the mobile view toggle button -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+       
+        {{-- <form method="POST" action='/search' class='col-10 d-flex align-items-center flex-grow-1'>
             @csrf
                 <input type='text' name='text' placeholder="Search Product, Services" class='main-field' /> 
-        </form>
+        </form> --}}
     </div>
     <div class='banner text-center pt-2' >
         <p>Call to action highlight banner freeshipping on tech via TARA | knutsford</p>
