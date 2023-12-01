@@ -69,7 +69,7 @@
         </div>
         <div class='col-10'>
             <div class='row'>
-                <p class='col-6 mb-0 mt-3'>{{count($products)}} items found</p>
+                <p class='col-6 mb-0 mt-3'>{{count($products)}} item(s) found</p>
                 <div class='col-6'>
                  
                        {{$products->links('pagination::bootstrap-4')}}
@@ -83,13 +83,17 @@
                     <img class='col-3' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
                     <div class='col-9'>
                         <h2>{{$product->name}}</h2>
-                        <p class='mb-0'>{{$product->created_at->format('F j, Y, g:i A')}}</p>
+                        <p class='mb-0'>{{$product->created_at->format('F j, Y, g:i A')}}  |  By {{$product->brand}}</p>
                         <img class='' src='{{asset('/stars.png')}}' width='100'  />
-
-                        <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost)@endphp</span> JMD</p>
+                        <div >
+                            <p style='margin-bottom:0;'><sup>$</sup><span style='font-size:20px; margin-bottom:0; margin-right:10px;'>@php echo number_format($product->cost)@endphp <span style='font-size:'>JMD</span></span>   <span style='color:green;'>{{$product->quantity}} left in stock</span></p> 
+                        </div>
                         <p class='mb-3'>{{$product->shortDescription}}</p>
-                        <div style='width:100%;'>
-                            <a href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
+                        <div style='width:100%;' class='row'>
+                            <a class='col-6' href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
+                            <div class='col-6'>
+                                <a href='#' style='float:right; margin-top:10px;'>Download PDF</a>
+                            </div>
                         </div>
                     </div>
                 </div>

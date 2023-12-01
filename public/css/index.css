@@ -6,9 +6,7 @@ body {
 
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
+
 
 
 .first-nav-container {
@@ -89,16 +87,88 @@ body {
 
 
 .computer-dropdown {
-  min-width:100%;
+  min-width:80%;
   height:1000px;
   position:absolute;
   z-index:1000;
   background-color: white;
   display: none;
-  right:1px;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  right:150px;
 }
 
-.banner-list li:hover .computer-dropdown {
+.hardware-dropdown {
+  min-width:80%;
+  height:1000px;
+  position:absolute;
+  z-index:1000;
+  background-color: white;
+  display: none;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  right:150px;
+}
+
+.parts-dropdown {
+  min-width:80%;
+  height:100px;
+  position:absolute;
+  z-index:1000;
+  background-color: white;
+  display: none;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  right:150px;
+}
+
+.accessories-dropdown {
+  min-width:80%;
+  height:1000px;
+  position:absolute;
+  z-index:1000;
+  background-color: white;
+  display: none;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  right:150px;
+}
+
+.network-dropdown {
+  min-width:80%;
+  height:100px;
+  position:absolute;
+  z-index:1000;
+  background-color: white;
+  display: none;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  right:150px;
+}
+
+.banner-list .list-1:hover .computer-dropdown {
+  display: block;
+}
+
+.banner-list .list-3:hover .parts-dropdown {
+  display: block;
+}
+
+
+.banner-list .list-5:hover .network-dropdown {
+  display: block;
+}
+
+.banner-list .list-2:hover .hardware-dropdown {
+  display: block;
+}
+
+.banner-list .list-4:hover .accessories-dropdown {
   display: block;
 }
 

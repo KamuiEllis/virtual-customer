@@ -1,8 +1,8 @@
 <x-layout>
     <div class='row mt-1 p-5'>
-        <div class='col-9'>
+        <div class='col-9 '>
         @foreach ($cart as $product)
-                <div class='row m-2' style='border:none;'>
+                <div class='row m-2 ' style='border:none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding:10px;'>
                     {{-- <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  /> --}}
                     <div class='col-3'>
                         <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}' width="200" />
@@ -10,9 +10,17 @@
             
                     <div class='col-9'>
                         <h3>{{$product->name}}</h3>
-                        <p>{{$product->shortDescription}}</p>
-                        <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost)@endphp</span> JMD</p>
-                        <form action='/carts/{{$product->cart_id}}' method='POST'>
+                        <p class='mb-0'>@php 
+                                $date = new DateTime($product->created_at); 
+                                echo $date->format('F j, Y, g:i A');
+                            @endphp  |  By {{$product->brand}}</p>
+                            <img class='' src='{{asset('/stars.png')}}' width='100'  />
+                    
+                        <div >
+                            <p style='margin-bottom:0;'><sup>$</sup><span style='font-size:20px; margin-bottom:0; margin-right:10px;'>@php echo number_format($product->cost)@endphp <span style='font-size:'>JMD</span></span>   <span style='color:green;'>{{$product->quantity}} left in stock</span></p> 
+                        </div>
+                        <p>{{$product->shortDescription}}</p>                     
+                           <form action='/carts/{{$product->cart_id}}' method='POST'>
                             @csrf
                             @method('DELETE')
                             <button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>Remove</button>

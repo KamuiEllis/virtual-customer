@@ -78,15 +78,21 @@
                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
                     <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                   </svg> Sign Out</p></button></a> --}}
-                  <a class='nav-button row' type='submit'  style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                  <button class='nav-button row' type='submit'  style='float:right; margin:0 10px;' > <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
                     <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                  </svg> Logout</p></a>
+                  </svg> Logout</p></button>
 
             <a class='nav-button row' style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-rss" viewBox="0 0 16 16">
                 <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                 <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
               </svg> Feedback</p></a>
+
+              <a class='nav-button row' style='float:right; margin:0 10px;' href='/orderHistory'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483m.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535m-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+              </svg> Order History</p></a>
 
               <a class='nav-button row' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
                 <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
@@ -172,7 +178,7 @@
             <a class="second-nav-link col-3" href="/cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#007bff" class="bi bi-bag" viewBox="0 0 16 16">
                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-                </svg><sub style='color:#4461ab;'>{{auth()->user()->cart}}</sub><br/>
+                </svg>  @auth<sub style='color:#4461ab;'>{{auth()->user()->cart}}</sub>@endif<br/>
                 Cart 
                 </a>
              </div>
@@ -188,222 +194,145 @@
     </div>
     <div class='banner text-center pt-2' >
         <ul class='banner-list'>
-            <li class='li'>Phones 
-                <div class='computer-dropdown text-center'>
-                    <div class='container row m-auto'>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+            <li class='li list-1'>Consumer and Enterprise 
+                <div class='computer-dropdown' style='color:black;'>
+                    <div style='100%' class='row'>
+                        <div class='col-9 p-5'>
+                            <div class='' style='display:flex; '>
+                                <div class='' style='flex:1;'>
+                                    <img src='{{ asset('/monitor.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/Tablet Category.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/lappy.jpg') }}' width='150' />
+                                </div>
+                            </div>
+                            <hr/>
+                            <div style='width:100%; text-align:left;' class='row'>
+                                <div class='col-3'>
+                                    <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
+
+                                    <p>Laptops</p>
+                                    <p>Desktops & All in One PC</p>
+                                    <p>Tablets</p>
+                                    <p>Printers</p>
+                                    <p>Inks and Toners</p>
+                                    <p>Monitors</p>
+                                    <p>Gaming Computers</p>
+                                    <p>Phones</p>
+                                </div>
+
+                                <div class='col-9'>
+                                    <img src='{{ asset('/gold.jpg') }}' class='mt-4' width='350' style='float:right; '/>
+                                </div>
+                            </div>
                         </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+
+                        <div class='col-3' style='background-color:rgb(240, 240, 240);'>
+                            <div style='background-color:white; height:80px; width:100%; padding:10px; padding-top:10px; font-size:30px; margin-top:10px; border-left:5px solid green;'>
+                                Special Offers
+                            </div>
                         </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                        </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                        </div>
-                    </div>
-                  
-                    <hr/>
-                    <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                    <div class='row'>
-                        <div class='col-3'>
-                            <p>ABOUT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-       
                     </div>
                 </div>
             </li>
-            <li class='li'>Computers  
-                <div class='computer-dropdown text-center'>
-                <div class='container row m-auto'>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                </div>
-              
-                <hr/>
-                <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <p>ABOUT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-   
-                </div>
-            </div></li>
-            <li class='li'>Speakers 
-                <div class='computer-dropdown text-center'>
-                    <div class='container row m-auto'>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+            <li class='li list-2'>Enterprise Hardware  
+                <div class='hardware-dropdown' style='color:black;'>
+                    <div style='100%' class='row'>
+                        <div class='col-9 p-5'>
+                            <div class='' style='display:flex; '>
+                                <div class='' style='flex:1;'>
+                                    <img src='{{ asset('/switch.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/access.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/servers.jpg') }}' width='150' />
+                                </div>
+                            </div>
+                            <hr/>
+                            <div style='width:100%; text-align:left;' class='row'>
+                                <div class='col-3'>
+                                    <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
+
+                                    <p>Switches</p>
+                                    <p>Router and Wireless Technology</p>
+                                    <p>Servers</p>
+                                    <p>Access Points</p>
+                                    <p>Storage</p>
+                                </div>
+
+                                <div class='col-9'>
+                                    <img src='{{ asset('/hub.jpg') }}' class='mt-4' width='350' style='float:right; '/>
+                                </div>
+                            </div>
                         </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+
+                        <div class='col-3' style='background-color:rgb(240, 240, 240);'>
+                            <div style='background-color:white; height:80px; width:100%; padding:10px; padding-top:10px; font-size:30px; margin-top:10px; border-left:5px solid green;'>
+                                Special Offers
+                            </div>
                         </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                        </div>
-                        <div class='col-3'>
-                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                        </div>
-                    </div>
-                  
-                    <hr/>
-                    <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                    <div class='row'>
-                        <div class='col-3'>
-                            <p>ABOUT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-                        <div class='col-3'>
-                            <p>MY ACCOUNT</p>
-                            <ul style='list-style:none; padding:0;'>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                                <li>LINK</li>
-                            </ul>
-                        </div>
-       
                     </div>
                 </div>
             </li>
-            <li class='li'>Tablets <div class='computer-dropdown text-center'>
+            <li class='li list-3'>Computer Parts 
+                <div class='parts-dropdown' style='color:black;'>
+                    <h2 class='mt-3'>Coming Soon</h2>                        
+                </div>
+            </li>
+            <li class='li list-4'>Computer Accessories
+                <div class='accessories-dropdown' style='color:black;'>
+                    <div style='100%' class='row'>
+                        <div class='col-9 p-5'>
+                            <div class='' style='display:flex; '>
+                                <div class='' style='flex:1;'>
+                                    <img src='{{ asset('/bag.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/kayboard.jpg') }}' width='150' />
+                                </div>
+                                <div class=' ' style='flex:1;'>
+                                    <img src='{{ asset('/speaker.jpg') }}' width='150' />
+                                </div>
+                            </div>
+                            <hr/>
+                            <div style='width:100%; text-align:left;' class='row'>
+                                <div class='col-3'>
+                                    <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
+
+                                    <p>Laptop Bags</p>
+                                    <p>Keyboards</p>
+                                    <p>Speakers</p>
+                                    <p>Head Phones</p>
+                                    <p>Computer and Cable Adapters</p>
+                                </div>
+
+                                <div class='col-9'>
+                                    <img src='{{ asset('/headset.jpg') }}' class='mt-4' width='350' style='float:right; '/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='col-3' style='background-color:rgb(240, 240, 240);'>
+                            <div style='background-color:white; height:80px; width:100%; padding:10px; padding-top:10px; font-size:30px; margin-top:10px; border-left:5px solid green;'>
+                                Special Offers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class='li list-5'>Network Cabling Solutions 
+                <div class='network-dropdown' style='color:black;'>
+                    <h2 class='mt-3'>Coming Soon</h2>                        
+                </div>
+            </li>
+            {{-- <li class='li'>UPS</li> --}}
+            <li class='li'>More... </li>
+            {{-- <li class='li'>Cash Registers & Point of Sale Solutions <div class='computer-dropdown text-center'>
                 <div class='container row m-auto'>
                     <div class='col-3'>
                         <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
@@ -472,8 +401,8 @@
                     </div>
    
                 </div>
-            </div></li>
-            <li class='li'>Monitors <div class='computer-dropdown text-center'>
+            </div></li> --}}
+            {{-- <li class='li'>Drones <div class='computer-dropdown text-center'>
                 <div class='container row m-auto'>
                     <div class='col-3'>
                         <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
@@ -542,287 +471,7 @@
                     </div>
    
                 </div>
-            </div></li>
-            <li class='li'>Gaming <div class='computer-dropdown text-center'>
-                <div class='container row m-auto'>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                </div>
-              
-                <hr/>
-                <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <p>ABOUT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-   
-                </div>
-            </div></li>
-            <li class='li'>Headsets <div class='computer-dropdown text-center'>
-                <div class='container row m-auto'>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                </div>
-              
-                <hr/>
-                <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <p>ABOUT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-   
-                </div>
-            </div></li>
-            <li class='li'>Laptops <div class='computer-dropdown text-center'>
-                <div class='container row m-auto'>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                </div>
-              
-                <hr/>
-                <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <p>ABOUT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-   
-                </div>
-            </div></li>
-            <li class='li'>Hardware <div class='computer-dropdown text-center'>
-                <div class='container row m-auto'>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                    <div class='col-3'>
-                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
-                    </div>
-                </div>
-              
-                <hr/>
-                <h2 style="margin-bottom:50px;">Also in Computers</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <p>ABOUT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-                    <div class='col-3'>
-                        <p>MY ACCOUNT</p>
-                        <ul style='list-style:none; padding:0;'>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                            <li>LINK</li>
-                        </ul>
-                    </div>
-   
-                </div>
-            </div></li>
+            </div></li> --}}
 
            
         </ul>
