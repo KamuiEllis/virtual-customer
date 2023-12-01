@@ -11,47 +11,48 @@
     <div class='brands-section '>
         <div class='row text-align'>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Apple Category.jpg') }}' width='200' />
+                <h3>Apple</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Printer Ink Category.jpg') }}' width='200' />
+                <h3>Printer Ink</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Audio & Video Category.jpg') }}' width='200' />
+                <h3>Video and Audio</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Computer Cable Category.jpg') }}' width='200' />
+                <h3>Computer Cables</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Computer Chair Category.jpg') }}' width='200' />
+                <h3>Computer Chair</h3>
             </div>
+    
         </div>
 
         <div class='row text-align'>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Gaming Category.jpg') }}' width='200' />
+                <h3>Gaming</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Hardware Category.jpg') }}' width='200' />
+                <h3>Hardware</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Headset Category.jpg') }}' width='200' />
+                <h3>Headsets</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Keyboard Category.jpg') }}' width='200' />
+                <h3>Keyboards</h3>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
-                <img  src='{{ asset('/images/laptop.jpg') }}' width='200' />
-                <h3>Cameras</h3>
+                <img  src='{{ asset('/Monitor Category.jpg') }}' width='200' />
+                <h3>Monitors</h3>
             </div>
         </div>
     </div>

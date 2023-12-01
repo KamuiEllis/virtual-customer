@@ -21,7 +21,25 @@ body {
 }
 
 .main-field{
-    width:100%;
+    width:702px;
+    border:3px solid #007bff;
+    border-radius:15px;
+    margin-top:10px;
+}
+
+.search-button{
+  position:relative;
+  z-index:10;
+  border-radius:15px;
+  right:40px;
+  margin-top:10px;
+
+}
+
+.second-nav-link {
+  text-decoration: none;
+  color:black;
+  text-align: center;
 
 }
 
@@ -51,9 +69,42 @@ body {
     width: 134px;
 }
 
+.banner-list {
+  list-style: none;
+  list-style-type: none;
+  margin:0;
+}
+
+.banner-list .li {
+  display: inline;
+  margin: 0 10px;
+  padding:10px;
+}
+
+.banner-list .li:hover {
+  background-color: white;
+  color:#007bff;
+}
+
+
+
+.computer-dropdown {
+  min-width:100%;
+  height:1000px;
+  position:absolute;
+  z-index:1000;
+  background-color: white;
+  display: none;
+  right:1px;
+}
+
+.banner-list li:hover .computer-dropdown {
+  display: block;
+}
+
 .banner {
     width:100%;
-    background-color: rgb(219, 100, 100);
+    background-color: #007bff;
     min-height: 40px;
     color: white;
 }
@@ -76,7 +127,7 @@ body {
     border: none;
     font-weight: 600;
     color:white;
-    background-color: rgb(235, 119, 119);
+    background-color: #007bff;
 }
 
 .brands-section {
@@ -102,7 +153,7 @@ body {
     min-height:250px;
     width:100%;
     padding: 50px 100px;
-    background-color: rgb(219, 100, 100);
+    background-color:#007bff;
     color:white;
 }
 
@@ -128,6 +179,7 @@ body {
     width:480px;
     height:119px;
     border: 1px solid rgb(210, 210, 210);
+    
     padding: 10px 0
 }
 
@@ -232,5 +284,9 @@ body {
 }
 
 .product-container {
-  
+    margin-bottom:10px;
+}
+
+.pagination {
+  float:right;
 }

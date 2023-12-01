@@ -36,7 +36,7 @@
             {{-- <p>109 Harbour St. Kingston</p> --}}
         </div>
         @auth
-        <div style='width:100%;'>
+        {{-- <div style='width:100%;'>
             <form   style='margin-bottom:0px; width:100%; ' action="/logout" method="POST" >
                 @csrf
 
@@ -70,7 +70,33 @@
                   <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
                   <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
             </form>
-        </div>
+        </div> --}}
+        <form class='' style='width:100%;' action="/logout" method="POST" >
+ 
+                @csrf
+                {{-- <a class=' nav-button row' href='/login'><button  style='' type='submit'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                  </svg> Sign Out</p></button></a> --}}
+                  <a class='nav-button row' type='submit'  style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                  </svg> Logout</p></a>
+
+            <a class='nav-button row' style='float:right; margin:0 10px;' href='/login'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#52555b" class="bi bi-rss" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
+              </svg> Feedback</p></a>
+
+              <a class='nav-button row' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+                <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+              </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
+
+
+              <a class='nav-button row' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
+              <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+              <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
+        </form>
         @else
             <div class='' style='width:100%;'>
                
@@ -107,27 +133,53 @@
             <input type='text' name='text' placeholder="Search Product, Services" class='main-field' /> 
         </div> --}}
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
               <!-- Logo -->
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/">
                 <img src='{{ asset('/logo.png') }}' class='logo' />
 
               </a>
           
               <!-- Text bar -->
               <div class="collapse navbar-collapse justify-content-center" id="navbarText">
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" method="POST" action='/search'>
+                    @csrf
+                  <input class="form-control me-2 main-field" name='text'  type="search" placeholder="Search for Products" aria-label="Search">
+                  <button type='submit' class='btn btn-primary search-button'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg></button>
                 </form>
               </div>
           
-              <!-- This is for the mobile view toggle button -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              
             </div>
+
+            <div class='text-center ' style='width:100%;'>
+                <div class='row'>
+                <a class="second-nav-link col-3 " href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" style='margin-left: 22px;' width="20" height="20" fill="#007bff" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg><br/>
+                    Compare
+              </a>
+              <a class="second-nav-link col-5 " style='margin-left:10px;' href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#007bff" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                  </svg><br/>
+                Wish List
+                </a>
+            <a class="second-nav-link col-3" href="/cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#007bff" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg><sub style='color:#4461ab;'>{{auth()->user()->cart}}</sub><br/>
+                Cart 
+                </a>
+             </div>
+          </div>
           </nav>
+
+         
        
         {{-- <form method="POST" action='/search' class='col-10 d-flex align-items-center flex-grow-1'>
             @csrf
@@ -135,7 +187,646 @@
         </form> --}}
     </div>
     <div class='banner text-center pt-2' >
-        <p>Call to action highlight banner freeshipping on tech via TARA | knutsford</p>
+        <ul class='banner-list'>
+            <li class='li'>Phones 
+                <div class='computer-dropdown text-center'>
+                    <div class='container row m-auto'>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                    </div>
+                  
+                    <hr/>
+                    <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                    <div class='row'>
+                        <div class='col-3'>
+                            <p>ABOUT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+       
+                    </div>
+                </div>
+            </li>
+            <li class='li'>Computers  
+                <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Speakers 
+                <div class='computer-dropdown text-center'>
+                    <div class='container row m-auto'>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                        <div class='col-3'>
+                            <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                        </div>
+                    </div>
+                  
+                    <hr/>
+                    <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                    <div class='row'>
+                        <div class='col-3'>
+                            <p>ABOUT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+                        <div class='col-3'>
+                            <p>MY ACCOUNT</p>
+                            <ul style='list-style:none; padding:0;'>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                                <li>LINK</li>
+                            </ul>
+                        </div>
+       
+                    </div>
+                </div>
+            </li>
+            <li class='li'>Tablets <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Monitors <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Gaming <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Headsets <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Laptops <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+            <li class='li'>Hardware <div class='computer-dropdown text-center'>
+                <div class='container row m-auto'>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                    <div class='col-3'>
+                        <img src='{{ asset('/Computer Desk Category.jpg') }}' width='100' />
+                    </div>
+                </div>
+              
+                <hr/>
+                <h2 style="margin-bottom:50px;">Also in Computers</h2>
+                <div class='row'>
+                    <div class='col-3'>
+                        <p>ABOUT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+                    <div class='col-3'>
+                        <p>MY ACCOUNT</p>
+                        <ul style='list-style:none; padding:0;'>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                            <li>LINK</li>
+                        </ul>
+                    </div>
+   
+                </div>
+            </div></li>
+
+           
+        </ul>
+       
     </div>
     <div class=''>
         {{$slot}}
@@ -199,7 +890,7 @@
 
         <div>
             <img src='{{ asset('/white-logo.png') }}' class='logo' style='width:300px; height:200px'/>
-            <p style='margin-bottom:0;'>Computers Online copyrighted 2023 |</p>
+            <p style='margin-bottom:0;'>Computers Online copyrighted {{ date('Y') }} |</p>
             <p>Powered by <b style='color:red;'>Darkzide Studios</b></p>
         </div>
     </div>

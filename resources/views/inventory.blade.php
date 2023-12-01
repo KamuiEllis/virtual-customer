@@ -69,13 +69,26 @@
         </div>
         <div class='col-10'>
             <div class='row'>
+                <p class='col-6 mb-0 mt-3'>{{count($products)}} items found</p>
+                <div class='col-6'>
+                 
+                       {{$products->links('pagination::bootstrap-4')}}
+                    
+            </div>
+            </div>
+            <hr/>
+            <div class=''>
             @foreach ($products as $product)
-                <div class='product-container col-3 m-2' style='border:none;'>
-                    <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
-                    <div class=''>
+                <div class='product-container row m-2 mb-4' style='border:none; margin-bottom:10px;'>
+                    <img class='col-3' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
+                    <div class='col-9'>
+                        <h2>{{$product->name}}</h2>
+                        <p class='mb-0'>{{$product->created_at->format('F j, Y, g:i A')}}</p>
+                        <img class='' src='{{asset('/stars.png')}}' width='100'  />
+
                         <p><sup>$</sup><span style='font-size:20px'>@php echo number_format($product->cost)@endphp</span> JMD</p>
-                        <p class='mb-3' style='min-height:100px;'>{{$product->shortDescription}}</p>
-                        <div style='width:100%; text-align:center;'>
+                        <p class='mb-3'>{{$product->shortDescription}}</p>
+                        <div style='width:100%;'>
                             <a href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
                         </div>
                     </div>

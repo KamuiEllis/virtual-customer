@@ -16,7 +16,7 @@ class ProductController extends Controller
             'text' => [],
         ]);
 
-        $products = Product::search($inputs['text'])->get();
+        $products = Product::search($inputs['text'])->paginate();
         return view("inventory", ['products' => $products]);
     }
 
@@ -26,7 +26,7 @@ class ProductController extends Controller
 
 
     public function products(Request $request) {
-        $products = Product::orderBy("id","desc")->get();
+        $products = Product::orderBy("id","desc")->paginate(1);
         return view("inventory", ['products' => $products]);
     }
 
