@@ -47,27 +47,27 @@
         </button>
     </div> --}}
 
-    <div class='brands-section '>
+    <div class='brands-section ' style='color:black;'>
         <div class='row text-align'>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Apple Category.jpg') }}' width='200' />
-                <h3>Apple</h3>
+                <a href='/search/apple' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Apple</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Printer Ink Category.jpg') }}' width='200' />
-                <h3>Printer Ink</h3>
+                <a href='/search/ink' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Ink and Toner</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Audio & Video Category.jpg') }}' width='200' />
-                <h3>Video and Audio</h3>
+                <a href='/search/audio' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Video and Audio</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Computer Cable Category.jpg') }}' width='200' />
-                <h3>Computer Cables</h3>
+                <a href='/search/cables' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Computer Cables</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Computer Chair Category.jpg') }}' width='200' />
-                <h3>Computer Chair</h3>
+                <a href='/search/chair' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Computer Chair</h3></a>
             </div>
     
         </div>
@@ -75,23 +75,23 @@
         <div class='row text-align'>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Gaming Category.jpg') }}' width='200' />
-                <h3>Gaming</h3>
+                <a href='/search/gaming' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Gaming</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Hardware Category.jpg') }}' width='200' />
-                <h3>Hardware</h3>
+                <a href='/search/hardware' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Hardware</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Headset Category.jpg') }}' width='200' />
-                <h3>Headsets</h3>
+                <a href='/search/headsets' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Headsets</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Keyboard Category.jpg') }}' width='200' />
-                <h3>Keyboards</h3>
+                <a href='/search/keyboard' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Keyboard</h3></a>
             </div>
             <div style='background-color:white;' class='brand-block text-center py-2'>
                 <img  src='{{ asset('/Monitor Category.jpg') }}' width='200' />
-                <h3>Monitors</h3>
+                 <a href='/search/monitor' class='m-0 p-0' style='text-decoration:none; color:black;'><h3>Monitor</h3></a>
             </div>
         </div>
     </div>

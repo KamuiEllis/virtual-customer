@@ -52,7 +52,7 @@ Route::put('/editProfile/{customer}', [CustomerController::class, 'editProfile']
 
 Route::post('/search', [ProductController::class, 'search']);
 
-Route::get('/search', [ProductController::class, 'search2']);
+Route::get('/search/{text}', [ProductController::class, 'search2']);
 
 Route::get('/products/{product}', [ProductController::class, 'product']);
 

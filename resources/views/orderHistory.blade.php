@@ -27,7 +27,7 @@
           <h2>Order History</h2>
           <hr/>
 
-          <table class="table">
+          <table class=" table table-striped">
               <thead>
                 <tr>
                   <th scope="col">Name of recipient</th>

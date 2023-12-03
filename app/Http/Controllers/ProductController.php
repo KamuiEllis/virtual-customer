@@ -21,14 +21,8 @@ class ProductController extends Controller
     }
 
 
-    public function search2(Request $request) {
-        $inputs = $request->validate([
-            'text' => [],
-        ]);
-        
-        
-
-        $products = Product::search('')->paginate(5);
+    public function search2(string $text) {
+        $products = Product::search($text)->paginate(5);
         return view("inventory", ['products' => $products]);
     }
 

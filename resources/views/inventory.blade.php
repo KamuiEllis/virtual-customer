@@ -2,7 +2,7 @@
 
     <div class='row mt-1 p-5'>
         <div class='col-2'>
-            @if(isset($products[0]))
+            {{-- @if(isset($products[0]))
                 <p style='border-bottom:1px solid grey; padding-bottom:10px;'>{{ $products[0]->productType }}</p>
             @else
                 <p style='border-bottom:1px solid grey; padding-bottom:10px;'>Misc</p>
@@ -65,16 +65,16 @@
                         Sony
                     </label>
                 </div>
-            </div>
+            </div> --}}
         </div>
-        <div class='col-10'>
+        <div class='col-12'>
             <div class='row'>
                 <p class='col-6 mb-0 mt-3'>{{count($products)}} item(s) found</p>
                 <div class='col-6'>
                  
                        {{$products->links('pagination::bootstrap-4')}}
                     
-            </div>
+             </div>
             </div>
             <hr/>
             <div class=''>

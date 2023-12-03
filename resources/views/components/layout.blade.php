@@ -210,15 +210,14 @@
                             <div style='width:100%; text-align:left;' class='row'>
                                 <div class='col-3'>
                                     <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
-
-                                    <p>Laptops</p>
-                                    <p>Desktops & All in One PC</p>
-                                    <p>Tablets</p>
-                                    <p>Printers</p>
-                                    <p>Inks and Toners</p>
-                                    <p>Monitors</p>
-                                    <p>Gaming Computers</p>
-                                    <p>Phones</p>
+                                    <p><a href='/search/laptop' style='text-decoration:none; color:black;'>Laptops</a></p>
+                                    <p><a href='/search/all' style='text-decoration:none; color:black;'>Desktops & All in One PC</p></a>
+                                    <p><a href='/search/tablets' style='text-decoration:none; color:black;'>Tablets</a></p>
+                                    <p><a href='/search/printers' style='text-decoration:none; color:black;'>Printers</a></p>
+                                    <p><a href='/search/ink' style='text-decoration:none; color:black;'>Inks and Toners</a></p>
+                                    <p><a href='/search/monitor' style='text-decoration:none; color:black;'>Monitors</a></p>
+                                    <p><a href='/search/gaming' style='text-decoration:none; color:black;'>Gaming Computers</a></p>
+                                    <p><a href='/search/phones' style='text-decoration:none; color:black;'>Phones</a></p>
                                 </div>
 
                                 <div class='col-9'>
@@ -255,11 +254,11 @@
                                 <div class='col-3'>
                                     <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
 
-                                    <p>Switches</p>
-                                    <p>Router and Wireless Technology</p>
-                                    <p>Servers</p>
-                                    <p>Access Points</p>
-                                    <p>Storage</p>
+                                    <p><a href='/search/switches' style='text-decoration:none; color:black;'>Switches</a></p>
+                                    <p><a href='/search/router' style='text-decoration:none; color:black;'>Router and Wireless Technology</a></p>
+                                    <p><a href='/search/servers' style='text-decoration:none; color:black;'>Servers</a></p>
+                                    <p><a href='/search/access' style='text-decoration:none; color:black;'>Access Points</a></p>
+                                    <p><a href='/search/storage' style='text-decoration:none; color:black;'>Storage</a></p>
                                 </div>
 
                                 <div class='col-9'>
@@ -301,11 +300,11 @@
                                 <div class='col-3'>
                                     <h4 class='mt-5' style='border-bottom:2px solid black; padding-bottom:2px; width:300px;' >Also in Consumer and Enterprise</h4>
 
-                                    <p>Laptop Bags</p>
-                                    <p>Keyboards</p>
-                                    <p>Speakers</p>
-                                    <p>Head Phones</p>
-                                    <p>Computer and Cable Adapters</p>
+                                    <p><a href='/search/bags' style='text-decoration:none; color:black;'>Laptop Bags</a></p>
+                                    <p><a href='/search/keyboard' style='text-decoration:none; color:black;'>Keyboard</a></p>
+                                    <p><a href='/search/speakers' style='text-decoration:none; color:black;'>Speakers</a></p>
+                                    <p><a href='/search/headphones' style='text-decoration:none; color:black;'>Head Phones</a></p>
+                                    <p><a href='/search/cable' style='text-decoration:none; color:black;'>Computer Cable Adapters</a></p>
                                 </div>
 
                                 <div class='col-9'>
@@ -328,7 +327,11 @@
                 </div>
             </li>
             {{-- <li class='li'>UPS</li> --}}
-            <li class='li'>More... </li>
+            <li class='li list-6'>More... 
+                <div class='more-dropdown' style='color:black;'>
+                    <h2 class='mt-3'>Coming Soon</h2>                        
+                </div>
+            </li>
             {{-- <li class='li'>Cash Registers & Point of Sale Solutions <div class='computer-dropdown text-center'>
                 <div class='container row m-auto'>
                     <div class='col-3'>
