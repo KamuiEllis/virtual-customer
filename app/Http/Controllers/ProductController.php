@@ -20,8 +20,13 @@ class ProductController extends Controller
         return view("inventory", ['products' => $products]);
     }
 
+
+    
     public function product(Product $product) {
-        return view('product', ['product'=> $product]);
+        
+        $products = Product::search($product->subcategory)->paginate(5);
+
+        return view('product', ['product'=> $product, 'related' => $products]);
     }
 
 

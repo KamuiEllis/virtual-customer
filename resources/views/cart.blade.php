@@ -1,5 +1,7 @@
 <x-layout>
     <div class='row mt-1 p-5'>
+        <h3>Shopping Cart</h3>
+        <hr/>
         <div class='col-9 '>
         @foreach ($cart as $product)
                 <div class='row m-2 ' style='border:none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding:10px;'>
@@ -31,6 +33,11 @@
         </div>
         {{-- <p>{{auth()->user()->id}}</p> --}}
         <div class='col-3 card p-3' >
+            <div style='padding-top:5px; margin-bottom:10px; background-color:rgb(17, 39, 120); width:100%; height:50px; text-align:center; color:white;'>
+                <h2 style=''>Sub Total</h2>
+            </div>
+           
+            <h3>Total: <sup>$</sup>@php echo number_format($total)@endphp JMD</h3>
             <p>Select the area you would like you package to be delivered to.</p>
             <form action='/carts/toCheckout' class='mb-3' style=''>
                 <label for="exampleFormControlInput1" class="form-label">Delivery Zones:</label>
@@ -41,7 +48,7 @@
                     @endforeach
                 </select>
                 <div style='width:100%; text-align:center;' class='mt-4'>
-                    <button class='buttons'>Confirm</button>
+                    <button class='buttons' style='background-color:rgb(206, 156, 80);'>Confirm</button>
                 </div>
             </form>
         </div>

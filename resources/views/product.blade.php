@@ -10,11 +10,14 @@
             <div class='col-7 text-center'>
                 <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}' width='400'  />
             </div>
-            <div class='col-5 card'>
+            <div class='col-5'>
                 <div class='p-2 pt-3'>
-                    <p style='margin:0;'>{{$product->brand}}</p>
-                    <h2 style='color:rgb(219, 100, 100);'>{{$product->name}}</h2>
-                    <img class='' src='{{asset('/stars.png')}}' width='100'  /> <p style='margin-left:6px;'>4.7</p>
+                    <h3>{{$product->name}}</h3>
+                    <p class='mb-0'>@php 
+                            $date = new DateTime($product->created_at); 
+                            echo $date->format('F j, Y, g:i A');
+                        @endphp  |  By {{$product->brand}}</p>
+                        <img class='' src='{{asset('/stars.png')}}' width='100'  /> | <span style='color:green'>{{$product->quantity}} in stock</span>
 
                     <h3>$@php echo number_format($product->cost) @endphp</h3>
                     {{-- <p>Quantity: {{$product->quantity}}</p> --}}
@@ -34,11 +37,86 @@
             </div>
         </div>
 
-        <h2>About this item</h2>
-        <p class='mt-3'>
-            {{$product->description}}
-        </p>
+        <div class='row'>
+            <div class='col-7 px-5 py-3  card'>
+                <ul class="nav nav-pills text-center mb-3" style='justify-content:center;' >
+                    <li class="nav-item ">
+                      <a class="nav-link active" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseOne" >Product Details</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                      <a class="nav-link" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseTwo" >Unboxing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseThree">Reviews</a>
+                    </li>
+                  </ul>
+                  
+                  <div class="collapse show" id="collapseOne">
+                    <div class="">
+                      <p>{{$product->shortDescription}}</p>
+                      <p>{{$product->description}}</p>
 
-        <h2>Comments</h2>
+                      <p><b>Brand:</b> {{$product->brand}}</p>
+                      <p><b>Weight:</b> {{$product->weight}} (LBS)</p>
+                      <p><b>Model Number:</b> {{$product->partNumber}}</p>
+                    </div>
+                  </div>
+                  <div class="collapse" id="collapseTwo">
+                        
+                        <div class=' text-center'>
+                            <iframe width="560" height="315" src='{{$product->unboxing}}' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+    
+                  </div>
+                  <div class="collapse" id="collapseThree">
+                    <div class="text-center">
+                      <h2>Not Available</h2>
+                    </div>
+                  </div>
+                  
+            </div>
+
+            <div class='col-5 px-5 py-3'  >
+                <div class=''>
+                    <p>Similar Items</p>
+                    {{$related}}
+                    @foreach ($related as $item)
+                        <a href='/products/{{$item->id}}' style='text-decoration:none; color:black;'><div class='p-4'>
+                            <div class='row'>
+                                <img src='{{ asset(env('ADMIN_URL').''.$item->image) }}' width='100' class='col-3' />
+                                <div class='col-9'>
+                                    <h4>{{$item->name}}</h4>
+                                    <p class='mb-0'>@php 
+                                        $date = new DateTime($product->created_at); 
+                                        echo $date->format('F j, Y, g:i A');
+                                    @endphp  |  By {{$product->brand}}</p>
+                                                        <h3>$@php echo number_format($product->cost) @endphp</h3>
+
+                                </div>
+                            </div>
+                        </div></a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var navLinks = document.querySelectorAll('.nav-pills .nav-link');
+          navLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              navLinks.forEach(lnk => {
+                lnk.classList.remove('active');
+                var target = document.querySelector(lnk.getAttribute('data-bs-target'));
+                target.classList.remove('show');
+              });
+              this.classList.add('active');
+              var target = document.querySelector(this.getAttribute('data-bs-target'));
+              target.classList.add('show');
+            });
+          });
+        });
+        </script>
 </x-layout>

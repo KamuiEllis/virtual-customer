@@ -21,8 +21,14 @@ class CartController extends Controller
         //    ->get();
 
         $cart = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id')->get();
+        $total = 0;
+
+        foreach ($cart as $item) {
+            $total += $item->cost;
+        }
+        
         $zones = DB::table('zones')->get();
-        return view('cart', ['cart' => $cart, 'zones' => $zones]);
+        return view('cart', ['cart' => $cart, 'zones' => $zones, 'total' => $total]);
     }
 
     public function deleteCart(Cart $cart) {
@@ -42,15 +48,17 @@ class CartController extends Controller
 
         $totalCost = 0;
         $totalPounds = 0;
+        $subTotal = 0;
         $calculatedProducts = [];
         $zone = Zone::find($inputs['zone']);
         $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
 
         foreach($carts as $product) {
-           $totalCost +=  ($product->weight * $zone->perPound) + $product->cost + $zone->price;
-           $totalPounds += $product->weight;
+           $totalCost +=  ($product->weight * $zone->perPound) + $product->cost;
+           $totalPounds += ($product->weight * $zone->perPound);
+           $subTotal += $product->cost;
         }   
 
-        return view('checkout', ['totalCost' => $totalCost, 'zone' => $zone, 'totalPounds' => $totalPounds]);
+        return view('checkout', ['totalCost' => $totalCost, 'zone' => $zone, 'totalPounds' => $totalPounds, 'subTotal' => $subTotal]);
     }
 }

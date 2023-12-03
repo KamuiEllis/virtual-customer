@@ -62,7 +62,7 @@ class OrderController extends Controller
             }
         }
 
-        $order = [ 'order_sku' => $randomNumber, 'zone_per_pound' => $zone->perPound, 'zone_cost' => $zone->price,   'name' => auth()->user()->firstname . ' ' . auth()->user()->lastname, 'address' => $zone->address, 'parish' => $zone->parish, 
+        $order = [ 'order_sku' => $randomNumber, 'zone_per_pound' => $zone->perPound, 'zone_cost' => 500,   'name' => auth()->user()->firstname . ' ' . auth()->user()->lastname, 'address' => $zone->address, 'parish' => $zone->parish, 
         'delivery_type' => $zone->services, 'area' => $zone->type, 'cart_id' => auth()->user()->id, 'total_payment' => $totalCost, 'status' => 'pending', 'customer_id' => auth()->user()->id];
     
         $newInfo = DB::table('orders')->insert($order);
@@ -71,7 +71,7 @@ class OrderController extends Controller
         DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->update(['enabled' => 1, 'order' => $randomNumber]);
         DB::table('customers')->where('id', auth()->user()->id)->update(['cart' => 0]);
 
-        return redirect('/orderHistory')->with('success', 'Order was successful');
+        return view('checkoutSuccess');
     }
 
     public function orders(Request $request) {
@@ -83,5 +83,9 @@ class OrderController extends Controller
         $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('order', $order->order_sku)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id', 'carts.quantity as quantity_bought')->get();
         $zone = Zone::find($order);
         return view('orderDetail', ['carts' => $carts, 'order' => $order]);
+    }
+
+    public function orderSuccessful(Order $order) {
+        return view('checkoutSuccess', ['order' => $order]);
     }
 }

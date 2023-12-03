@@ -6,8 +6,48 @@ body {
 
 }
 
+.success-background {
+  /* background-image: url('/logo.png'); */
+  background-color: #18327a;
+}
+
+.success-container {
+  min-width:300px;
+  width:500px;
+  padding:0;
+  margin: auto;
+  min-height:500px;
+  border-radius: 20px;
+  background-color: white;
+} 
+
+.text {
+  min-width:300px;
+  width:500px;
+  padding:0;
 
 
+}
+
+.mail {
+  width:250px;
+  position:absolute;
+  left:640px;
+  z-index: 100;
+}
+
+.success-container2 {
+  min-width:300px;
+  width:500px;
+  margin: auto;
+  min-height:200px;
+  border-radius: 20px 20px 0 0;
+  background-color: #254dba;
+} 
+
+.checkout-fields {
+  width:300px;
+}
 
 .first-nav-container {
     /* padding: 0 150px; */
