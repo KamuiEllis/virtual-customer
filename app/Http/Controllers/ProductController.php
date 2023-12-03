@@ -16,7 +16,19 @@ class ProductController extends Controller
             'text' => [],
         ]);
 
-        $products = Product::search($inputs['text'])->paginate();
+        $products = Product::search($inputs['text'])->paginate(5);
+        return view("inventory", ['products' => $products]);
+    }
+
+
+    public function search2(Request $request) {
+        $inputs = $request->validate([
+            'text' => [],
+        ]);
+        
+        
+
+        $products = Product::search('')->paginate(5);
         return view("inventory", ['products' => $products]);
     }
 
@@ -25,13 +37,14 @@ class ProductController extends Controller
     public function product(Product $product) {
         
         $products = Product::search($product->subcategory)->paginate(5);
+       
 
         return view('product', ['product'=> $product, 'related' => $products]);
     }
 
 
     public function products(Request $request) {
-        $products = Product::orderBy("id","desc")->paginate(1);
+        $products = Product::orderBy("id","desc")->paginate(5);
         return view("inventory", ['products' => $products]);
     }
 

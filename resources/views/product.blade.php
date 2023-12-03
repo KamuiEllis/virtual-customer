@@ -79,7 +79,7 @@
             <div class='col-5 px-5 py-3'  >
                 <div class=''>
                     <p>Similar Items</p>
-                    {{$related}}
+
                     @foreach ($related as $item)
                         <a href='/products/{{$item->id}}' style='text-decoration:none; color:black;'><div class='p-4'>
                             <div class='row'>

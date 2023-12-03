@@ -47,6 +47,10 @@ class CustomerController extends Controller
         return redirect('/login');
     }
 
+    public function dashboard(Request $request) {
+        return view('dashboard');
+    }
+
     public function editProfile(Customer $customer,  Request $request) {
         $inputs = $request->validate([
             'firstname' => ['required'],

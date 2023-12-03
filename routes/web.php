@@ -33,6 +33,8 @@ Route::get('/profile', function () {
 
 Route::get('/orderHistory', [OrderController::class, 'orders']);
 
+Route::get('/dashboard', [CustomerController::class, 'dashboard']);
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -49,6 +51,8 @@ Route::put('/editProfile/{customer}', [CustomerController::class, 'editProfile']
 //product
 
 Route::post('/search', [ProductController::class, 'search']);
+
+Route::get('/search', [ProductController::class, 'search2']);
 
 Route::get('/products/{product}', [ProductController::class, 'product']);
 

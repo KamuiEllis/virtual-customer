@@ -21,6 +21,11 @@ body {
   background-color: white;
 } 
 
+#carouselExample {
+  max-width:100%;
+  width:100%;
+}
+
 .text {
   min-width:300px;
   width:500px;
