@@ -142,7 +142,6 @@
               <!-- Logo -->
               <a class="navbar-brand" href="/">
                 <img src='{{ asset('/logo.png') }}' class='logo' />
-
               </a>
           
               <!-- Text bar -->
@@ -479,66 +478,36 @@
         {{$slot}}
     </div>
     <div class='footer'>
-        <div class='row text-center'>
-            <div class='col-2'>
-                <p>ABOUT</p>
-                <ul style='list-style-type: none; padding:0;'>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                </ul>
-            </div>
-            <div class='col-2'>
-                <p>MY ACCOUNT</p>
-                <ul style='list-style-type: none; padding:0;'>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                </ul>
-            </div>
-            <div class='col-2'>
-                <p>FAQ</p>
-                <ul style='list-style-type: none; padding:0;'>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                </ul>
-            </div>
-            <div class='col-2'>
-                <p>LEGAL DOCUMENTS</p>
-                <ul style='list-style-type: none; padding:0;'>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                    <li>LINK</li>
-                </ul>
-            </div>
+        <div class='row '>
             <div class='col-4'>
-                <img src='{{ asset('/logo.png') }}' class='logo' style='width:300px; height:150px'/>
-                <img src='{{ asset('/images/payment.png') }}' class='logo' style='width:300px; height:200px'/>
+                <img src='{{ asset('/white.png') }}'   width='200'/>
+                <p style='text-align:left; ' class='mt-3'>At Computers Online, we believe that
+                    technology should be accessible and enjoyable for everyone. That's why we've made it our mission to provide out customers with the best possible tech solutions and support referrals. </p>
+                <div style='width:100%; text-align:left; color:#ff6e37;'>
+                     <p>Read More</p>
+                </div>
 
             </div>
-        </div>
+            <div class='col-2 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
+                <p>MY ACCOUNT</p>
+                <ul style='list-style-type: none; padding:0; '>
+                    <li>Dashboard</li>
+                </ul>
+            </div>
 
-        <div>
-            <img src='{{ asset('/white-logo.png') }}' class='logo' style='width:300px; height:200px'/>
-            <p style='margin-bottom:0;'>Computers Online copyrighted {{ date('Y') }} |</p>
-            <p>Powered by <b style='color:red;'>Darkzide Studios</b></p>
+            <div class='col-2 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
+                <p>LEGAL DOCUMENTS</p>
+                <ul style='list-style-type: none; padding:0; '>
+                    <li>Privacy Policy</li>
+                    <li>EULA</li>
+                    <li>Terms of Use</li>
+                </ul>
+            </div>
+
+            <div class='col-4 ml-4 px-5' style='text-align:left;'>
+                <img src='{{ asset('/lasco.png') }}' />
+
+            </div>
         </div>
     </div>
 </body>
