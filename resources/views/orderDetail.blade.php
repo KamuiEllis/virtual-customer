@@ -1,8 +1,8 @@
 <x-layout>
-    <div class='row mt-1 p-5'>
+    <div class='row mt-1 p-lg-5 p-2'>
         <h2>Order History</h2>
         <hr/>
-        <div class='mt-3 p-3 card'>
+        <div class='mt-3 p-lg-3 card'>
             <p><b>Receiver's name:</b> {{$order->name}}</p>
             <p><b>Parish:</b> {{$order->parish}}</p>
             <p><b>Address:</b> {{$order->address}}</p>
@@ -11,7 +11,7 @@
             <p><b>Type of Delivery:</b> {{$order->delivery_type}}</p>
 
             <h3 class='mt-5'>Products</h3>
-            <table class="table mt-1">
+            <table class="table table-responsive mt-1">
                 <thead>
                   <tr>
                     <th scope="col">Name</th>
