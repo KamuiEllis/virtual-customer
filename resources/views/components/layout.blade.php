@@ -61,14 +61,14 @@
                     <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                   </svg> Sign Out</p></a></button>
 
-                  <a class='nav-button row' style=' margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+                  <a class='nav-button row blue-but' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
                   </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
 
 
-                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:101px; padding:0; margin-left:331px'>Tech News Today</p></a>
-                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
-                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
+                  <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:101px; padding:0; margin-left:331px'>Tech News Today</p></a>
+                  <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+                  <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
             </form>
         </div> --}}
         <form class='' style='width:100%;' action="/logout" method="POST" >
@@ -92,14 +92,14 @@
                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
               </svg> Dashboard</p></a>
 
-              <a class='nav-button row' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+              <a class='nav-button row blue-but' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
                 <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
               </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
 
 
-              <a class='nav-button row' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
-              <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
-              <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
+              <a class='nav-button row useless' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
+              <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+              <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
         </form>
         @else
             <div class='' style='width:100%;'>
@@ -116,14 +116,14 @@
                     <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
                   </svg> Feedback</p></a>
 
-                  <a class='nav-button row' style='float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
+                  <a class='nav-button row blue-but' href='/register'> <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(255, 255, 255)" class="bi bi-tools" viewBox="0 0 16 16">
                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
                   </svg> Online Tech Support Mon - Fri 8am - 5pm</p></a>
 
 
-                  <a class='nav-button row' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
-                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
-                  <a class='nav-button row' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
+                  <a class='nav-button row useless' style='float:left;  margin:0 2px;' href='/login'> <p style='border-bottom:2px solid black; width:137px; padding:0; margin-left:331px'>Tech News Today</p></a>
+                  <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> | About Us |</p></a>
+                  <a class='nav-button row useless' style='float:left; margin:0 2px;' href='/login'> <p> Contact Us</p></a>
             </div>
         @endif    
     </div>

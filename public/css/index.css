@@ -422,3 +422,37 @@ body {
 .pagination {
   float:right;
 }
+
+.blue-but {
+  display:block;
+  float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px;
+}
+
+.useless{
+  display:block;
+} 
+
+.custom-container-fluid {
+  display:flex;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .custom-container-fluid {
+    max-width: 100%;
+}
+
+  .blue-but {
+    display:none;
+  }
+
+  .useless {
+    display:none;
+  }
+}

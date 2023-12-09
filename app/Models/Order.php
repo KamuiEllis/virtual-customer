@@ -18,7 +18,13 @@ class Order extends Model
         'cart_id',
         'total_payment',
         'status',
-        'customer_id'
+        'customer_id',
+        'firstname',
+        'lastname',
+        'parish',
+        'town',
+        'addressOne',
+        'addressTwo'
     ];
 
 
