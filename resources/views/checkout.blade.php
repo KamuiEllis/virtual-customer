@@ -1,10 +1,10 @@
 <x-layout>
-    <form class='row mt-1 p-5' action='/pay/{{$zone->id}}' method='POST'>
+    <form class='row mt-1 p-lg-5 p-3' action='/pay/{{$zone->id}}' method='POST'>
       @csrf
         <h3>Payment Information</h3>
         <hr/>
         
-        <div class='col-8 p-3 mr-2' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>
+        <div class='col-lg-8 col-sm-12 p-lg-3 mr-2' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>
           <div style='padding-top:5px; padding-left:10px; margin-bottom:10px; background-color:rgb(17, 39, 120); width:100%; height:50px; color:white;'>
             <h2 style=''>Checkout Information</h2>
         </div>
@@ -100,7 +100,7 @@
             
           </div>
 
-          <div class='col-3 p-3' style='margin-left:20px; min-height:300px;'>
+          <div class='col-lg-3 col-sm-12 p-3 sum-container'>
             <div style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;' class='p-2'>
               <div style='padding-top:5px; padding-left:10px; margin-bottom:10px; background-color:rgb(17, 39, 120); width:100%; height:50px; color:white;'>
                 <h2 style=''>Summary</h2>

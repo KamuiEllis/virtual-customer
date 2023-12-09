@@ -7,10 +7,10 @@
                 {{ session('success') }}
             </div>
             @endif
-            <div class='col-7 text-center'>
-                <img class='' src='{{ asset(env('ADMIN_URL').''.$product->image) }}' width='400'  />
+            <div class='col-lg-7 col-sm-12 text-center'>
+                <img class='detail-image' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'   />
             </div>
-            <div class='col-5'>
+            <div class='col-lg-5 col-sm-12'>
                 <div class='p-2 pt-3'>
                     <h3>{{$product->name}}</h3>
                     <p class='mb-0'>@php 
@@ -38,15 +38,15 @@
         </div>
 
         <div class='row'>
-            <div class='col-7 px-5 py-3  card'>
+            <div class='col-lg-7 col-sm-12 px-lg-5 py-3  card'>
                 <ul class="nav nav-pills text-center mb-3" style='justify-content:center;' >
-                    <li class="nav-item ">
+                    <li class="nav-item mb-1">
                       <a class="nav-link active" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseOne" >Product Details</a>
                     </li>
-                    <li class="nav-item mx-3">
+                    <li class="nav-item mx-3 mb-1">
                       <a class="nav-link" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseTwo" >Unboxing</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mb-1">
                       <a class="nav-link" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseThree">Reviews</a>
                     </li>
                   </ul>
@@ -64,7 +64,7 @@
                   <div class="collapse" id="collapseTwo">
                         
                         <div class=' text-center'>
-                            <iframe width="560" height="315" src='{{$product->unboxing}}' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class='detail-frame' src='{{$product->unboxing}}' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
     
                   </div>
@@ -76,15 +76,15 @@
                   
             </div>
 
-            <div class='col-5 px-5 py-3'  >
+            <div class='col-lg-5 col-sm-12 px-lg-5 py-3'  >
                 <div class=''>
                     <p>Similar Items</p>
 
                     @foreach ($related as $item)
-                        <a href='/products/{{$item->id}}' style='text-decoration:none; color:black;'><div class='p-4'>
+                        <a href='/products/{{$item->id}}' style='text-decoration:none; color:black;'><div class='p-lg-4'>
                             <div class='row'>
-                                <img src='{{ asset(env('ADMIN_URL').''.$item->image) }}' width='100' class='col-3' />
-                                <div class='col-9'>
+                                <img src='{{ asset(env('ADMIN_URL').''.$item->image) }}' width='100' class='col-lg-3 col-lg-12' />
+                                <div class='col-lg-9 col-sm-12'>
                                     <h4>{{$item->name}}</h4>
                                     <p class='mb-0'>@php 
                                         $date = new DateTime($product->created_at); 

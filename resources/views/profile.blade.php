@@ -1,6 +1,6 @@
 <x-layout>
-    <div class='row mt-1 p-5'>
-        <form class='col-6' action="/editProfile/{{auth()->user()->id}}" method='POST'>
+    <div class='row mt-1 p-lg-5'>
+        <form class='col-lg-6 col-sm-12' action="/editProfile/{{auth()->user()->id}}" method='POST'>
             @csrf
             @method('PUT')
             @if (session('success'))

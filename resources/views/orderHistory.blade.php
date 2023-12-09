@@ -1,6 +1,6 @@
 <x-layout>
-    <div class='row mt-1 p-5'>
-      <form class='col-3' action="/logout" method="POST" >
+    <div class='row mt-1 p-lg-5'>
+      <form class='col-lg-3 col-sm-12' action="/logout" method="POST" >
         <ul class="list-group">
             <a href='/dashboard' style='text-decoration:none;'><li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -18,7 +18,7 @@
               </svg><span style='margin-left:5px;'>Logout</span></li></button>
           </ul>
     </form>
-      <div class='col-9'>
+      <div class='col-lg-9 col-sm-12'>
           @if (session('success'))
           <div class='alert alert-success mt-5' role='alert'>
               {{ session('success') }}
@@ -27,7 +27,7 @@
           <h2>Order History</h2>
           <hr/>
 
-          <table class=" table table-striped">
+          <table class=" table table-responsive table-responsive-sm table-striped">
               <thead>
                 <tr>
                   <th scope="col">Name of recipient</th>

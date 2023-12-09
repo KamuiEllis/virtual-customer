@@ -1,9 +1,9 @@
 <x-layout>
-    <div class='mt-1 p-5'>
+    <div class='mt-1 p-lg-5 p-1'>
 
         <div class='row' >
             
-            <form class='col-3' action="/logout" method="POST" >
+            <form class='col-lg-3 col-sm-12' action="/logout" method="POST" >
               
                 <ul class="list-group">
                     <a href='/dashboard' style='text-decoration:none;'><li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
