@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class='row mt-1 p-5'>
+    <div class='row mt-1 p-lg-5'>
         <div class='col-2'>
             {{-- @if(isset($products[0]))
                 <p style='border-bottom:1px solid grey; padding-bottom:10px;'>{{ $products[0]->productType }}</p>
@@ -69,19 +69,17 @@
         </div>
         <div class='col-12'>
             <div class='row'>
-                <p class='col-6 mb-0 mt-3'>{{count($products)}} item(s) found</p>
-                <div class='col-6'>
-                 
+                <p class='col-lg-6 col-sm-12 mb-0 mt-3 num-items'>{{count($products)}} item(s) found</p>
+                <div class='col-lg-6 col-sm-12 text-center pag'>
                        {{$products->links('pagination::bootstrap-4')}}
-                    
              </div>
             </div>
             <hr/>
             <div class=''>
             @foreach ($products as $product)
                 <div class='product-container row m-2 mb-4' style='border:none; margin-bottom:10px;'>
-                    <img class='col-3' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
-                    <div class='col-9'>
+                    <img class='col-lg-3 col-sm-12' src='{{ asset(env('ADMIN_URL').''.$product->image) }}'  />
+                    <div class='col-lg-9 col-sm-12'>
                         <h2>{{$product->name}}</h2>
                         <p class='mb-0'>{{$product->created_at->format('F j, Y, g:i A')}}  |  By {{$product->brand}}</p>
                         <img class='' src='{{asset('/stars.png')}}' width='100'  />
@@ -90,9 +88,9 @@
                         </div>
                         <p class='mb-3'>{{$product->shortDescription}}</p>
                         <div style='width:100%;' class='row'>
-                            <a class='col-6' href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
-                            <div class='col-6'>
-                                <a href='#' style='float:right; margin-top:10px;'>Download PDF</a>
+                            <a class='col-lg-6 col-sm-12' href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
+                            <div class='col-lg-6 col-sm-12'>
+                                <a href='#' class='pdf-link'>Download PDF</a>
                             </div>
                         </div>
                     </div>

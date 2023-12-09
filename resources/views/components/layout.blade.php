@@ -29,10 +29,10 @@
 
 <body>
     <div class='row first-banner text-center pt-2'>
-        <div class='col-4 text-center'>
+        <div class='col-lg-4 col-sm-1 text-center'>
             {{-- <p>109 Harbour St. Kingston</p> --}}
         </div>
-        <div class='col-3 text-center'>
+        <div class='col-lg-3 col-sm-1 text-center'>
             {{-- <p>109 Harbour St. Kingston</p> --}}
         </div>
         @auth
@@ -138,14 +138,14 @@
         </div> --}}
 
         <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
+            <div class="custom-container-fluid">
               <!-- Logo -->
               <a class="navbar-brand" href="/">
                 <img src='{{ asset('/logo.png') }}' class='logo' />
               </a>
           
               <!-- Text bar -->
-              <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+              <div class="search-field justify-content-center" id="navbarText">
                 <form class="d-flex" method="POST" action='/search'>
                     @csrf
                   <input class="form-control me-2 main-field" name='text'  type="search" placeholder="Search for Products" aria-label="Search">
@@ -190,6 +190,19 @@
         </form> --}}
     </div>
     <div class='banner text-center pt-2' >
+        <div class="dropdown drop">
+            <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style='color:white;'>
+              See Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Consumer and Enterprise</a></li>
+              <li><a class="dropdown-item" href="#">Enterprise Hardware</a></li>
+              <li><a class="dropdown-item" href="#">Computer Parts </a></li>
+              <li><a class="dropdown-item" href="#">Computer Accessories </a></li>
+              <li><a class="dropdown-item" href="#">Network Cabling Solutions  </a></li>
+            </ul>
+          </div>
+
         <ul class='banner-list'>
             <li class='li list-1'>Consumer and Enterprise 
                 <div class='computer-dropdown' style='color:black;'>
@@ -482,7 +495,7 @@
     </div>
     <div class='footer'>
         <div class='row '>
-            <div class='col-4'>
+            <div class='col-lg-4 col-sm-12'>
                 <img src='{{ asset('/white.png') }}'   width='200'/>
                 <p style='text-align:left; ' class='mt-3'>At Computers Online, we believe that
                     technology should be accessible and enjoyable for everyone. That's why we've made it our mission to provide out customers with the best possible tech solutions and support referrals. </p>
@@ -491,14 +504,14 @@
                 </div>
 
             </div>
-            <div class='col-2 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
+            <div class='col-lg-2 col-sm-12 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
                 <p>MY ACCOUNT</p>
                 <ul style='list-style-type: none; padding:0; '>
                     <li>Dashboard</li>
                 </ul>
             </div>
 
-            <div class='col-2 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
+            <div class='col-lg-2 col-sm-12 ml-4 px-5' style='text-align:left; border-left:2px solid white;'>
                 <p>LEGAL DOCUMENTS</p>
                 <ul style='list-style-type: none; padding:0; '>
                     <li>Privacy Policy</li>
@@ -507,8 +520,8 @@
                 </ul>
             </div>
 
-            <div class='col-4 ml-4 px-5' style='text-align:left;'>
-                <img src='{{ asset('/lasco.png') }}' />
+            <div class='col-lg-4 col-sm-12 ml-4 px-lg-5' style='text-align:left;'>
+                <img src='{{ asset('/lasco.png') }}' class='footer-img' />
 
             </div>
         </div>

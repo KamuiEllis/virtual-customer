@@ -98,14 +98,14 @@
 
     <div class='news-section '>
         <div class='row'>
-        <div class='col-6 text-center'>
-            <video width="520" height="240" controls>
+        <div class='col-lg-6 col-sm-12 text-center'>
+            <video class='vid'  controls>
                 <source src="movie.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class='col-6 text-center'>
+        <div class='col-lg-6 col-sm-12 text-center'>
             <p class='news-text'>Latest Tech Review from Computer Sales</p>
         </div>
     </div>
