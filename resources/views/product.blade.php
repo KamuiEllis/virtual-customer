@@ -27,8 +27,8 @@
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Quanitity</label>
-                            <input type="number" name='quantity' class="form-control" id="exampleInputEmail1" placeholder="Enter how much you'd like to purchase">
-                            <small id="emailHelp" class="form-text text-muted">Enter about needed</small>
+                            <input type="number" name='quantity' class="form-control quan-field" id="exampleInputEmail1" placeholder="0">
+                            <small id="emailHelp" class="form-text text-muted">Enter amount needed</small>
                           </div>
                     
                         <button type='submit' class='buttons mt-5'>Add to Cart</button>

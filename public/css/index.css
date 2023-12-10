@@ -456,6 +456,10 @@ body {
   float:right;
 }
 
+.quan-field {
+  width:10%;
+}
+
 .blue-but {
   display:block;
   float:right; margin:0 10px; background:#4461ab; color:rgb(255, 255, 255); height: 30px;
@@ -509,6 +513,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+
+  
+.quan-field {
+  width:50%;
+}
 
   .top-picks {
     display:block;

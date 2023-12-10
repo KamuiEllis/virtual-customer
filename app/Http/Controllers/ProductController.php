@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\Customer;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Models\Wishlist;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
@@ -34,8 +35,26 @@ class ProductController extends Controller
     }
 
     public function addToWishlist(Product $product) {
-        Wishlist::create([ 'customer' => auth()->user()->id, 'product' => $product->id]);
-        return back()->with('success', 'Product added to wishlist!');;
+
+        $wishlist = Wishlist::firstOrCreate(
+            ['customer' => auth()->user()->id, 'product' => $product->id],
+            ['customer' => auth()->user()->id, 'product' => $product->id]
+        );
+
+        if ($wishlist->wasRecentlyCreated) {
+            // Record was created
+            // Additional actions if needed for new record
+            return back()->with('success', 'Product added to wishlist!');;
+        } else {
+            return back()->with('error', 'Product is already in your wishlist');;
+        }
+
+      
+    }
+
+    public function getWishlist() {
+        $wishlists = DB::table('wishlists')->where('customer', auth()->user()->id)->join('products', 'products.id', '=', 'wishlists.product')->select('products.*', 'wishlists.id as wishlist_id')->get();
+        return view('wishlist', ['list' => $wishlists]);
     }
 
 

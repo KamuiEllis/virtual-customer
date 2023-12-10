@@ -6,6 +6,12 @@
                 {{ session('success') }}
             </div>
             @endif
+
+            @if (session('error'))
+            <div class='alert alert-danger mt-5' role='alert'>
+                {{ session('error') }}
+            </div>
+            @endif
         <div class='col-2'>
             {{-- @if(isset($products[0]))
                 <p style='border-bottom:1px solid grey; padding-bottom:10px;'>{{ $products[0]->productType }}</p>

@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::get('/inventory', [ProductController::class, 'products']);
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/wishlist', [ProductController::class, 'getWishlist']);
 
 Route::get('/orderHistory', [OrderController::class, 'orders']);
 
