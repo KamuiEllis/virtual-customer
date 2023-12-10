@@ -6,7 +6,7 @@
             </div>
             
             <div class='col-sm-12 col-lg-6 p-3' >
-                <h3 style='border-bottom:3px solid red; width:60px; padding-bottom:5px;' >Login</h3>
+                <h3 style='border-bottom:3px solid #007bff; width:60px; padding-bottom:5px;' >Login</h3>
                 <form action="/login" method="POST" style='margin-top:30px;'>
                     @if (session()->has('error'))
                     <p class='lead' style='color:rgb(222, 117, 117)18, 151, 151)'>

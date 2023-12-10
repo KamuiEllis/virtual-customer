@@ -17,9 +17,7 @@ use App\Http\Controllers\CustomerController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ProductController::class, 'deals']);
 
 Route::get('/login', function () {
     return view('login');
@@ -52,7 +50,11 @@ Route::put('/editProfile/{customer}', [CustomerController::class, 'editProfile']
 
 Route::post('/search', [ProductController::class, 'search']);
 
+Route::get('/search', [ProductController::class, 'search2']);
+
 Route::get('/search/{text}', [ProductController::class, 'search2']);
+
+Route::get('/products/wishlist/{product}', [ProductController::class, 'addToWishlist']);
 
 Route::get('/products/{product}', [ProductController::class, 'product']);
 

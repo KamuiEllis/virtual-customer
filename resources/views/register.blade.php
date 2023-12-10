@@ -2,7 +2,7 @@
     <div class='contain2'>
         <div class='row'>
             <div class='col-12' >
-                <h3 style='border-bottom:3px solid red; width:60px; padding-bottom:5px;'>Register</h3>
+                <h3 style='border-bottom:3px solid #007bff; width:60px; padding-bottom:5px;'>Register</h3>
                 <form action="/register" method="POST" style=''>
                     @csrf
 

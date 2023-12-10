@@ -1,6 +1,11 @@
 <x-layout>
 
     <div class='row mt-1 p-lg-5'>
+        @if (session('success'))
+            <div class='alert alert-success mt-5' role='alert'>
+                {{ session('success') }}
+            </div>
+            @endif
         <div class='col-2'>
             {{-- @if(isset($products[0]))
                 <p style='border-bottom:1px solid grey; padding-bottom:10px;'>{{ $products[0]->productType }}</p>
@@ -88,7 +93,10 @@
                         </div>
                         <p class='mb-3'>{{$product->shortDescription}}</p>
                         <div style='width:100%;' class='row'>
-                            <a class='col-lg-6 col-sm-12' href='/products/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a>
+                            <div class='col-lg-6 col-sm-12'>
+                                <a  href='/products/{{$product->id}}'><button class='buttons mb-2' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>View</button></a><br/>
+                                <a  href='/products/wishlist/{{$product->id}}'><button class='buttons' style='height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>Add to Wishlist</button></a>
+                            </div>
                             <div class='col-lg-6 col-sm-12'>
                                 <a href='#' class='pdf-link'>Download PDF</a>
                             </div>

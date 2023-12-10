@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Wishlist;
 
 class ProductController extends Controller
 {
@@ -20,10 +21,21 @@ class ProductController extends Controller
         return view("inventory", ['products' => $products]);
     }
 
+    public function deals(Request $request) {
+        $products = Product::search('')->paginate(4);
+        return view('home', ['deals' => [], 'products' => $products]);
+    }
 
-    public function search2(string $text) {
-        $products = Product::search($text)->paginate(5);
+    public function search2(Request $request) {
+        $searchQuery = $request->query('search');
+        $page = $request->query('page');
+        $products = Product::search( $searchQuery)->paginate(5, 'page', $page);
         return view("inventory", ['products' => $products]);
+    }
+
+    public function addToWishlist(Product $product) {
+        Wishlist::create([ 'customer' => auth()->user()->id, 'product' => $product->id]);
+        return back()->with('success', 'Product added to wishlist!');;
     }
 
 

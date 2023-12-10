@@ -25,69 +25,41 @@ class OrderController extends Controller
             'parish' => ['required'],
         ]);
 
-        // $response = Http::withHeaders([
-        //     'Accept' => 'application/json',
-        //     'PowerTranz-PowerTranzId' => '88805586',
-        //     'PowerTranzPowerTranzPassword' => 'NUOW7YpVIRRzRnh5uPleTCzgNNJT2IsXqcVTD9c75F8NMgunklv3xF',
-        //     'Content-Type' => 'application/json; charset=utf-8'
-        // ])->post('https://staging.ptranz.com/api/spi/sale', [
-        //     "TransactionIdentifier" => "5ee7d7c1-af7-4d7e-9386-
-        //     abb280822b73",
-        //     "OrderIdentifier" => "INT-95e75078-7d5-40e8-8053-
-        //     c3d488f05f59-Orc 3569",
-        //     'TotalAmount' => 2000,
-        //     "CurrencyCode" => "388",
-        //     "ThreeDSecure" => true,
-        //     "MerchantResponseUrl" => "https://localhost:5001/Final",
-        //     "Source" => $inputs
-        // ]);
+        $response = Http::withHeaders([
+            'Accept' => 'application/json',
+            'PowerTranz-PowerTranzId' => '88805586',
+            'PowerTranzPowerTranzPassword' => 'NUOW7YpVIRRzRnh5uPleTCzgNNJT2IsXqcVTD9c75F8NMgunklv3xF',
+            'Content-Type' => 'application/json; charset=utf-8'
+        ])->post('https://staging.ptranz.com/api/spi/sale', [
+            "TransactionIdentifier" => "5ee7d7c1-af7-4d7e-9386-
+            abb280822b73",
+            "OrderIdentifier" => "INT-95e75078-7d5-40e8-8053-
+            c3d488f05f59-Orc 3569",
+            'TotalAmount' => 2000,
+            "CurrencyCode" => "388",
+            "ThreeDSecure" => true,
+            "MerchantResponseUrl" => "https://localhost:5001/Final",
+            "Source" => $inputs
+        ]);
 
 
-        // if ($response->successful()) {
-        //     // Handle successful response
-        //     $responseData = $response->json();
-        //     // Process the response data as needed
-        //     return ['data' => $responseData];
-        // } else {
-        //     // Handle error
-        //     $errorData = $response->json();
-        //     return ['data' => $errorData, 'error' => 'error occued'];
-        //     // Process the error data as needed
-        // }
-
-        
-
-        $totalCost = 0;
-        $totalPounds = 0;
-        $calculatedProducts = [];
-        $zone = Zone::find($zone->id);
-        $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.customer')->select('products.*', 'carts.id as cart_id')->get();
-        
-        foreach($carts as $product) {
-           $totalCost +=  ($product->weight * $zone->perPound) + $product->cost + $zone->price;
-           $totalPounds += $product->weight;
-        }  
-        $randomNumber = rand(10, 10000);
-        while(true) {
-            $tempOrders = DB::table('orders')->where('order_sku', $randomNumber)->get();
-            if(count($tempOrders) > 0) {
-                $randomNumber = rand(10, 10000);
-                continue;
-            } else {
-                break;
-            }
+        if ($response->successful()) {
+            // Handle successful response
+            $responseData = $response->json();
+            // Process the response data as needed
+            return ['data' => $responseData];
+        } else {
+            // Handle error
+            $errorData = $response->json();
+            return ['data' => $errorData, 'error' => 'error occued'];
+            // Process the error data as needed
         }
 
-        $order = [ 'order_sku' => $randomNumber, 'zone_per_pound' => $zone->perPound, 'zone_cost' => 500,   'name' => auth()->user()->firstname . ' ' . auth()->user()->lastname, 'address' => $zone->address, 'parish' => $zone->parish, 
-        'delivery_type' => $zone->services, 'area' => $zone->type, 'cart_id' => auth()->user()->id, 'total_payment' => $totalCost, 'status' => 'pending', 'customer_id' => auth()->user()->id];
-    
-        $newInfo = DB::table('orders')->insert($order);
         
 
-        DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->update(['enabled' => 1, 'order' => $randomNumber]);
-        DB::table('customers')->where('id', auth()->user()->id)->update(['cart' => 0]);
+       
 
-        return view('checkoutSuccess');
+        // return view('checkoutSuccess');
     }
 
     public function orders(Request $request) {
