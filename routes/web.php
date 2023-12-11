@@ -55,7 +55,7 @@ Route::post('/search', [ProductController::class, 'search']);
 
 Route::get('/search', [ProductController::class, 'search2']);
 
-Route::get('/search/{text}', [ProductController::class, 'search2']);
+Route::get('/search/{text}', [ProductController::class, 'search3']);
 
 Route::get('/products/wishlist/{product}', [ProductController::class, 'addToWishlist']);
 

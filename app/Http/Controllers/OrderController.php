@@ -63,8 +63,8 @@ class OrderController extends Controller
         $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id', 'carts.quantity as amount_bought')->get();
         $cartProducts = '';
         foreach($carts as $product) {
-           $totalCost +=  ($product->weight * $zone->perPound) + $product->cost;
-           $totalPounds += $product->weight;
+           $totalCost +=  (($product->weight * $zone->perPound) + $product->cost) * $product->amount_bought;
+           $totalPounds += $product->weight * $product->amount_bought;
         }   
 
         $randomSku = rand(10000000000, 999999999999);

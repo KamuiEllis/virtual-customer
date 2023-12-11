@@ -19,7 +19,7 @@
                             <img class='' src='{{asset('/stars.png')}}' width='100'  />
                     
                         <div >
-                            <p style='margin-bottom:0;'><sup>$</sup><span style='font-size:20px; margin-bottom:0; margin-right:10px;'>@php echo number_format($product->cost)@endphp <span style='font-size:'>JMD</span></span>   <span style='color:green;'>{{$product->quantity}} left in stock</span></p> 
+                            <p style='margin-bottom:0;'><sup>$</sup><span style='font-size:20px; margin-bottom:0; margin-right:10px;'>@php echo number_format($product->cost)@endphp <span style='font-size:'>JMD</span></span>   <span style='color:green;'>{{$product->buy_quantity}} bought</span></p> 
                         </div>
                         <p>{{$product->shortDescription}}</p>                     
                            <form action='/carts/{{$product->cart_id}}' method='POST'>

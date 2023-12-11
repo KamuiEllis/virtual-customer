@@ -34,6 +34,11 @@ class ProductController extends Controller
         return view("inventory", ['products' => $products]);
     }
 
+    public function search3(String $text, Request $request) {
+        $products = Product::search( $text)->paginate(5);
+        return view("inventory", ['products' => $products]);
+    }
+
     public function addToWishlist(Product $product) {
 
         $wishlist = Wishlist::firstOrCreate(
