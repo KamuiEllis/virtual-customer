@@ -83,4 +83,5 @@ Route::get('/orderDetail/{sku}', [OrderController::class, 'orderDetail']);
 
 //comment
 Route::post('/comment/{product}', [CommentController::class, 'addComment']);
+Route::get('/comment/delete/{comment}', [CommentController::class, 'deleteComment']);
 

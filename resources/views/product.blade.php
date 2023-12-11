@@ -71,28 +71,52 @@
     
                   </div>
                   <div class="collapse" id="collapseThree">
-                    <form class="row" action='/comment/{{$product->id}}' method='POST'>
-                      @csrf
-                      <div class=' col-lg-6 col-sm-12'>
-                        <div class="form-group" style='margin-bottom:20px;'>
-                          <label for="exampleInputEmail1">Title</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" name='title' aria-describedby="emailHelp" placeholder="Title of comment">
-                          <small id="emailHelp" class="form-text text-muted">Enter comment title.</small>
-                        </div>
-
-                      
-  
-                        <div class="form-group">
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment'></textarea>
-                            <small id="emailHelp" class="form-text text-muted">Enter comment.</small>
-                          </div>                       
-                        </div>
-                        <button type='submit' class='buttons' style='margin-top:20px;'>Submit</button>
-                      </div>
+                    <p>
+                      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Add Comment
+                      </a>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        <form class="row" action='/comment/{{$product->id}}' method='POST'>
+                          @csrf
+                          <div class=' col-lg-6 col-sm-12'>
+                            <div class="form-group" style='margin-bottom:20px;'>
+                              <label for="exampleInputEmail1">Title</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name='title' aria-describedby="emailHelp" placeholder="Title of comment">
+                              <small id="emailHelp" class="form-text text-muted">Enter comment title.</small>
+                            </div>
+    
+                          
+      
+                            <div class="form-group">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment'></textarea>
+                                <small id="emailHelp" class="form-text text-muted">Enter comment.</small>
+                              </div>                       
+                            </div>
+                            <button type='submit' class='buttons' style='margin-top:20px;'>Submit</button>
+                          </div>
+                        
+                        </form>                      </div>
+                    </div>
                     
-                    </form>
+
+                    @foreach ($comments as $comment) 
+                      <div style='margin-top:20px;'>
+                        <b>{{$comment->firstname}} {{$comment->lastname}}</b> <span style='font-size:12px;'> 
+                        @php 
+                          $date = new DateTime($comment->created_at); 
+                          echo $date->format('F j, Y, g:i A');
+                      @endphp</span>
+                        <p class='mb-1'>{{$comment->title}}</p>
+                        <p style='margin-bottom:0px; '>{{$comment->comment}}</p>
+                      </div>
+                      @if ($comment->customer == auth()->user()->id)
+                        <a href='/comment/delete/{{$comment->comment_id}}' style='color:red; font-size:12px;' >Delete Comment</a>
+                      @endif
+                    @endforeach
                   </div>
                   
             </div>

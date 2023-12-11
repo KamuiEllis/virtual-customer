@@ -23,4 +23,11 @@ class CommentController extends Controller
         return back()->with('success', 'Comment Added');;
 
     }
+
+
+    public function deleteComment(Comment $comment, Request $request) {
+        $comment->delete();
+        return back()->with('success', 'Comment Deleted');;
+
+    }
 }

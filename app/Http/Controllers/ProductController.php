@@ -67,9 +67,10 @@ class ProductController extends Controller
     public function product(Product $product) {
         
         $products = Product::search($product->subcategory)->paginate(5);
-       
+        $comments = DB::table('comments')->where('product', $product->id)->join('customers', 'customers.id', '=', 'comments.customer')->select('comments.*', 'customers.*', 'customers.id as customer_id', 'comments.id as comment_id')->get();
 
-        return view('product', ['product'=> $product, 'related' => $products]);
+
+        return view('product', ['product'=> $product, 'related' => $products, 'comments' => $comments]);
     }
 
 
