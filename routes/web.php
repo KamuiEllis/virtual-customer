@@ -77,6 +77,6 @@ Route::post('/pay/{zone}', [OrderController::class, 'createOrder']);
 
 Route::get('/orderSuccessful/{order}', [OrderController::class, 'orderSuccessful']);
 
-Route::get('/orderDetail/{order}', [OrderController::class, 'orderDetail']);
+Route::get('/orderDetail/{sku}', [OrderController::class, 'orderDetail']);
 
 

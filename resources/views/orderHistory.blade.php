@@ -44,7 +44,7 @@
                       <td>$@php echo number_format($order->total_payment) @endphp</td>
                       <td>{{$order->address}}</td>
                       <td>{{$order->status}}</td>
-                      <td><a href='/orderDetail/{{$order->id}}'><button class='btn btn-secondary'>View</button></a></td>
+                      <td><a href='/orderDetail/{{$order->order_sku}}'><button class='btn btn-secondary'>View</button></a></td>
                   </tr>
                 @endforeach
               </tbody>

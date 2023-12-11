@@ -32,4 +32,9 @@ class Order extends Model
     {
         return ['name' => $this->name, 'address' => $this->address, 'parish' => $this->parish, 'delivery_type' => $this->delivery_type, 'area' => $this->area];
     }
+
+
+    protected $casts = [
+        'cart_id' => 'array',
+    ];
 }

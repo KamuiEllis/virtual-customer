@@ -3,7 +3,7 @@
       @csrf
         <h3>Payment Information</h3>
         <hr/>
-        
+     
         <div class='col-lg-8 col-sm-12 p-lg-3 mr-2' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>
           <div style='padding-top:5px; padding-left:10px; margin-bottom:10px; background-color:rgb(17, 39, 120); width:100%; height:50px; color:white;'>
             <h2 style=''>Checkout Information</h2>

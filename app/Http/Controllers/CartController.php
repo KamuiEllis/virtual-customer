@@ -20,11 +20,11 @@ class CartController extends Controller
         //    ->select('posts.*', 'users.name as user_name')
         //    ->get();
 
-        $cart = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id')->get();
+        $cart = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id', 'carts.quantity as buy_quantity')->get();
         $total = 0;
 
         foreach ($cart as $item) {
-            $total += $item->cost;
+            $total += ($item->cost * $item->buy_quantity);
         }
         
         $zones = DB::table('zones')->get();
@@ -51,12 +51,12 @@ class CartController extends Controller
         $subTotal = 0;
         $calculatedProducts = [];
         $zone = Zone::find($inputs['zone']);
-        $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id')->get();
+        $carts = DB::table('carts')->where('customer', auth()->user()->id)->where('enabled', 0)->join('products', 'products.id', '=', 'carts.product')->select('products.*', 'carts.id as cart_id')->select('products.*', 'carts.quantity as buy_quantity')->get();
 
         foreach($carts as $product) {
-           $totalCost +=  ($product->weight * $zone->perPound) + $product->cost;
+           $totalCost +=  (($product->weight * $zone->perPound) + $product->cost) *  $product->buy_quantity;
            $totalPounds += ($product->weight * $zone->perPound);
-           $subTotal += $product->cost;
+           $subTotal += ($product->cost) * $product->buy_quantity;
         }   
 
         return view('checkout', ['totalCost' => $totalCost, 'zone' => $zone, 'totalPounds' => $totalPounds, 'subTotal' => $subTotal]);

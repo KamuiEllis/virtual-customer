@@ -16,13 +16,18 @@
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Computers Online</title>
-
     <script src="{{ asset('/responsiveness.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/invoice.css') }}">
 </head>
 
 <body>
-    <div class='col-10'>
+    <div class='col-12 print-window'>
         {{$slot}}
     </div>
+
+    <script>
+        $('.print-window').click(function() {
+    window.print();
+});
+    </script>
 </body>

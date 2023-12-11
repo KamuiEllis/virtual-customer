@@ -31,7 +31,9 @@
                             <small id="emailHelp" class="form-text text-muted">Enter amount needed</small>
                           </div>
                     
-                        <button type='submit' class='buttons mt-5'>Add to Cart</button>
+                        <button type='submit' class='buttons mt-5 mb-1'>Add to Cart</button>
+                        <a  href='/products/wishlist/{{$product->id}}'><button class='buttons' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>Add to Wishlist</button></a>
+
                     </form>
                 </div>
             </div>
