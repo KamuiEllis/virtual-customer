@@ -2,8 +2,10 @@
     <div class='row mt-1 p-lg-5 p-2'>
         <h2>Order History</h2>
         <hr/>
+    
         <div class='mt-3 p-lg-3 card'>
-            <p><b>Receiver's name:</b> {{$order->name}}</p>
+          <img src='{{ asset('/logo.png') }}' style='width:200; margin-bottom:20px;'  />
+            <p class='m-10'><b>Receiver's name:</b> {{$order->name}}</p>
             <p><b>Parish:</b> {{$order->parish}}</p>
             <p><b>Address:</b> {{$order->address}}</p>
             <p><b>Area:</b> {{$order->area}}</p>

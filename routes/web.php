@@ -1,11 +1,12 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
-use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,4 +80,7 @@ Route::get('/orderSuccessful/{order}', [OrderController::class, 'orderSuccessful
 
 Route::get('/orderDetail/{sku}', [OrderController::class, 'orderDetail']);
 
+
+//comment
+Route::post('/comment/{product}', [CommentController::class, 'addComment']);
 

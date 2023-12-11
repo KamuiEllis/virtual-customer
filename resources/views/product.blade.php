@@ -71,9 +71,28 @@
     
                   </div>
                   <div class="collapse" id="collapseThree">
-                    <div class="text-center">
-                      <h2>Not Available</h2>
-                    </div>
+                    <form class="row" action='/comment/{{$product->id}}' method='POST'>
+                      @csrf
+                      <div class=' col-lg-6 col-sm-12'>
+                        <div class="form-group" style='margin-bottom:20px;'>
+                          <label for="exampleInputEmail1">Title</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" name='title' aria-describedby="emailHelp" placeholder="Title of comment">
+                          <small id="emailHelp" class="form-text text-muted">Enter comment title.</small>
+                        </div>
+
+                      
+  
+                        <div class="form-group">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment'></textarea>
+                            <small id="emailHelp" class="form-text text-muted">Enter comment.</small>
+                          </div>                       
+                        </div>
+                        <button type='submit' class='buttons' style='margin-top:20px;'>Submit</button>
+                      </div>
+                    
+                    </form>
                   </div>
                   
             </div>
@@ -85,7 +104,7 @@
                     @foreach ($related as $item)
                         <a href='/products/{{$item->id}}' style='text-decoration:none; color:black;'><div class='p-lg-4'>
                             <div class='row'>
-                                <img src='{{ asset(env('ADMIN_URL').''.$item->image) }}' width='100' class='col-lg-3 col-lg-12' />
+                                <img src='{{ asset(env('ADMIN_URL').''.$item->image) }}' width='100' class='col-lg-3 col-sm-12' />
                                 <div class='col-lg-9 col-sm-12'>
                                     <h4>{{$item->name}}</h4>
                                     <p class='mb-0'>@php 
