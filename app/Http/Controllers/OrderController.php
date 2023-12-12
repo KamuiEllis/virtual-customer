@@ -123,7 +123,7 @@ class OrderController extends Controller
                 'amount_bought' => $product['amount_bought'],
              
             ];
-            $totalWeight += $product['weight'];
+            $totalWeight += ($product['weight'] * $product['quantity']);
             // Add the product details to the productsArray
             $productsArray[] = $productDetails;
         }

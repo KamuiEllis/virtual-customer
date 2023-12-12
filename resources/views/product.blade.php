@@ -21,9 +21,12 @@
 
                     <h3>$@php echo number_format($product->cost) @endphp</h3>
                     {{-- <p>Quantity: {{$product->quantity}}</p> --}}
-                    <p>{{$product->shortDescription}}</p>
+                    <p style='margin-bottom:5px;'>{{$product->shortDescription}}</p>
+                    <a style='margin-bottom:10px; text-decoration:none;' href='/products/wishlist/{{$product->id}}'> <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#007bff" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                    </svg></span> Add to Wishlist</a>
 
-                    <form action='/products/addToCart/{{last(request()->segments())}}' method="POST">
+                    <form class='mt-3' action='/products/addToCart/{{last(request()->segments())}}' method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Quanitity</label>
@@ -31,8 +34,8 @@
                             <small id="emailHelp" class="form-text text-muted">Enter amount needed</small>
                           </div>
                     
-                        <button type='submit' class='buttons mt-5 mb-1'>Add to Cart</button>
-                        <a  href='/products/wishlist/{{$product->id}}'><button class='buttons' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>Add to Wishlist</button></a>
+                        <button type='submit' class='buttons mt-3 mb-1'>Add to Cart</button>
+                        {{-- <a  href='/products/wishlist/{{$product->id}}'><button class='buttons' style='box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>Add to Wishlist</button></a> --}}
 
                     </form>
                 </div>
@@ -40,7 +43,7 @@
         </div>
 
         <div class='row'>
-            <div class='col-lg-7 col-sm-12 px-lg-5 py-3  card'>
+            <div class='col-lg-7 col-sm-12 px-lg-5 py-3 card card-details'>
                 <ul class="nav nav-pills text-center mb-3" style='justify-content:center;' >
                     <li class="nav-item mb-1">
                       <a class="nav-link active" style='border-radius:0px; background-color:#ff6e37; color:white; cursor:pointer;' data-bs-target="#collapseOne" >Product Details</a>
@@ -104,18 +107,20 @@
                     
 
                     @foreach ($comments as $comment) 
-                      <div style='margin-top:20px;'>
+                      <div style='margin-top:20px; padding:15px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;'>
                         <b>{{$comment->firstname}} {{$comment->lastname}}</b> <span style='font-size:12px;'> 
                         @php 
                           $date = new DateTime($comment->created_at); 
                           echo $date->format('F j, Y, g:i A');
                       @endphp</span>
-                        <p class='mb-1'>{{$comment->title}}</p>
+                        <h3 class='mt-1 mb-2'>{{$comment->title}}</h3>
                         <p style='margin-bottom:0px; '>{{$comment->comment}}</p>
-                      </div>
-                      @if ($comment->customer == auth()->user()->id)
+
+                        @if ($comment->customer == auth()->user()->id)
                         <a href='/comment/delete/{{$comment->comment_id}}' style='color:red; font-size:12px;' >Delete Comment</a>
                       @endif
+                      </div>
+                     
                     @endforeach
                   </div>
                   
